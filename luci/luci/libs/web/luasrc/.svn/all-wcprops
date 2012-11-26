@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/9352/luci/branches/luci-0.11/libs/web/luasrc
+END
+http.lua
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/http.lua
+END
+i18n.lua
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/i18n.lua
+END
+sauth.lua
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/sauth.lua
+END
+config.lua
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/config.lua
+END
+dispatcher.lua
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/dispatcher.lua
+END
+cacheloader.lua
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/cacheloader.lua
+END
+template.lua
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/template.lua
+END
+cbi.lua
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/luasrc/cbi.lua
+END

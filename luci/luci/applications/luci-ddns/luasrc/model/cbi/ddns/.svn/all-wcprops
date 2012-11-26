@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/9405/luci/branches/luci-0.11/applications/luci-ddns/luasrc/model/cbi/ddns
+END
+ddns.lua
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/9405/luci/branches/luci-0.11/applications/luci-ddns/luasrc/model/cbi/ddns/ddns.lua
+END

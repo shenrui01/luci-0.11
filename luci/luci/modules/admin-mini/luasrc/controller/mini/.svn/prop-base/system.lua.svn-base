@@ -1,0 +1,11 @@
+K 12
+svn:keywords
+V 2
+Id
+K 13
+svn:mergeinfo
+V 247
+/luci/branches/luci-0.8/modules/admin-mini/luasrc/controller/mini/system.lua:4367-4369
+/luci/trunk/modules/admin-full/luasrc/controller/admin/system.lua:4865
+/luci/trunk/modules/admin-mini/luasrc/controller/mini/system.lua:9351,9353-9354,9365-9385
+END

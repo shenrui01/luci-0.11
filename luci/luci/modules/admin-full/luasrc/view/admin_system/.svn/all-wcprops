@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system
+END
+backupfiles.htm
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/backupfiles.htm
+END
+ipkg.htm
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/ipkg.htm
+END
+reboot.htm
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/reboot.htm
+END
+clock_status.htm
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/clock_status.htm
+END
+packages.htm
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/packages.htm
+END
+flashops.htm
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/flashops.htm
+END
+applyreboot.htm
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/applyreboot.htm
+END
+upgrade.htm
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/9349/luci/branches/luci-0.11/modules/admin-full/luasrc/view/admin_system/upgrade.htm
+END

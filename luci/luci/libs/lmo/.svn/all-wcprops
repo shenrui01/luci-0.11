@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/9349/luci/branches/luci-0.11/libs/lmo
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/9349/luci/branches/luci-0.11/libs/lmo/Makefile
+END
+standalone.mk
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/9349/luci/branches/luci-0.11/libs/lmo/standalone.mk
+END

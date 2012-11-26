@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/src
+END
+template_utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/src/template_utils.h
+END
+template_lualib.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/src/template_lualib.c
+END
+template_parser.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/src/template_parser.c
+END
+template_lualib.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/src/template_lualib.h
+END
+template_utils.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/src/template_utils.c
+END
+template_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9349/luci/branches/luci-0.11/libs/web/src/template_parser.h
+END

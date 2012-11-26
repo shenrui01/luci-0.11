@@ -1,0 +1,6 @@
+K 13
+svn:mergeinfo
+V 158
+/luci/branches/luci-0.8/contrib/package/freifunk-p2pblock:4367-4369
+/luci/trunk/contrib/package/freifunk-p2pblock:9351,9353-9354,9356-9360,9362-9363,9365-9385
+END

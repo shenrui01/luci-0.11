@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-openvpn/luasrc/model/cbi
+END
+openvpn-basic.lua
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-openvpn/luasrc/model/cbi/openvpn-basic.lua
+END
+openvpn.lua
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-openvpn/luasrc/model/cbi/openvpn.lua
+END
+openvpn-advanced.lua
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-openvpn/luasrc/model/cbi/openvpn-advanced.lua
+END

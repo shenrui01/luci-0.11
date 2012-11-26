@@ -1,0 +1,43 @@
+10
+
+dir
+9510
+http://svn.luci.subsignal.org/luci/branches/luci-0.11/themes
+http://svn.luci.subsignal.org
+
+
+
+2012-10-02T15:19:23.861129Z
+9348
+dgolle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ab181a69-ba2e-0410-a84d-ff88ab4c47bc
+
+freifunk-generic
+dir
+
+freifunk-bno
+dir
+
+base
+dir
+
+bootstrap
+dir
+
+openwrt
+dir
+

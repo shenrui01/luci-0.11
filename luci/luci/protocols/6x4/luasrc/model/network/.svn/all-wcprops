@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/9349/luci/branches/luci-0.11/protocols/6x4/luasrc/model/network
+END
+proto_6x4.lua
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/9349/luci/branches/luci-0.11/protocols/6x4/luasrc/model/network/proto_6x4.lua
+END

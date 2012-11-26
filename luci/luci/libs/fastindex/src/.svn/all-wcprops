@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/9349/luci/branches/luci-0.11/libs/fastindex/src
+END
+list.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/9349/luci/branches/luci-0.11/libs/fastindex/src/list.h
+END
+fastindex.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9349/luci/branches/luci-0.11/libs/fastindex/src/fastindex.c
+END

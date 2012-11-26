@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-olsr/luasrc/model/cbi/olsr
+END
+olsrd.lua
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-olsr/luasrc/model/cbi/olsr/olsrd.lua
+END
+olsrdplugins.lua
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-olsr/luasrc/model/cbi/olsr/olsrdplugins.lua
+END
+olsrddisplay.lua
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-olsr/luasrc/model/cbi/olsr/olsrddisplay.lua
+END
+olsrdhna.lua
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-olsr/luasrc/model/cbi/olsr/olsrdhna.lua
+END
+olsrdiface.lua
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/9349/luci/branches/luci-0.11/applications/luci-olsr/luasrc/model/cbi/olsr/olsrdiface.lua
+END
