@@ -1,0 +1,11 @@
+#!/bin/sh
+
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@RSS[-1]
+	set ucitrack.RSS="RSS"
+	set ucitrack.RSS.init='RSS'
+	commit ucitrack
+EOF
+chmod 755 /etc/init.d/RSS
+rm -f /tmp/luci-indexcache
+exit 0

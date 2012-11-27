@@ -1,0 +1,10 @@
+#!/bin/sh /etc/rc.common
+# RA MOD
+
+config RSS
+	option enable '0'
+	option aria2 '0'
+	option interval '24'
+	option folder '/mnt/sda1/'
+	option keywords '*'
+	option maxtask '5'

@@ -1,0 +1,53 @@
+#!/bin/sh /etc/rc.common
+# RA MOD
+
+START=99
+crontabs_root="/etc/crontabs/root"
+
+RSS_config(){
+	
+	local cfg="$1"
+
+	config_get enable "$cfg" enable '0'
+	config_get aria2 "$cfg" aria2 '0'
+	config_get keywords "$cfg" keywords '*'
+	config_get folder "$cfg" folder '/dev/null'
+	config_get interval "$cfg" interval '24'
+	config_get maxtask "$cfg" maxtask '5'
+
+	[ -z `which leech` ] && exit 1
+	[ "$enable" = '0' ] && stop && exit 0
+	[ ! -d "$folder" ] && echo "ERROR:Not a Folder" >&2 && exit 1
+
+	if [ "$aria2" = '0' ]; then
+		RSS="$(which leech) -m $maxtask -d "\"$folder\"" -k "\"$keywords\"""
+	else
+		RSS="$(which leech) -a -m $maxtask -d "\"$folder\"" -k "\"$keywords\"""
+	fi
+
+	if [ "$interval" != '0' ]; then
+		RSS_task_check
+		cmd="0 */$interval * * * $RSS >/dev/null 2>&1"
+		echo "$cmd" >> "$crontabs_root"
+		/etc/init.d/cron start
+	else
+		eval "$RSS"
+	fi
+
+}
+
+RSS_task_check(){
+	#if have RSS task , delete it
+	[ -f "$crontabs_root" ] &&{
+		sed -i '/leech/d' "$crontabs_root"
+	}
+}
+
+start(){
+	config_load RSS
+	config_foreach RSS_config RSS
+}
+
+stop(){
+	RSS_task_check
+}
