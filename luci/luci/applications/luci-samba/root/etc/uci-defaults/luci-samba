@@ -1,0 +1,9 @@
+#!/bin/sh
+
+chmod 755 /etc/init.d/samba
+/etc/init.d/samba enabled && {
+	/etc/init.d/samba stop
+	/etc/init.d/samba disable
+}
+rm -f /tmp/luci-indexcache
+exit 0
