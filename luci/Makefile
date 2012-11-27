@@ -6,6 +6,8 @@ ifeq ($(DUMP),)
   USELOCAL:=$(shell grep luci ../../../.project 2>/dev/null >/dev/null && echo 1)
 endif
 
+USELOCAL:=1
+
 PKG_NAME:=luci
 PKG_RELEASE:=1
 
@@ -14,14 +16,14 @@ PKG_BUILD_PARALLEL:=0
 ifeq ($(USELOCAL),1)
   PKG_VERSION:=0.11+svn
 else
-  PKG_SOURCE_URL:=http://svn.luci.subsignal.org/luci/$(PKG_BRANCH)
+  PKG_SOURCE_URL:=git://github.com/shenrui01/luci-0.11.git
   ifeq ($(DUMP),)
     PKG_REV:=$(shell LC_ALL=C svn info $(CURDIR) | sed -ne's/^Revision: //p')
     PKG_VERSION:=0.11+svn$(PKG_REV)
   endif
   PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
   PKG_SOURCE:=$(PKG_SOURCE_SUBDIR).tar.gz
-  PKG_SOURCE_PROTO:=svn
+  PKG_SOURCE_PROTO:=git
   PKG_SOURCE_VERSION:=$(PKG_REV)
 endif
 
@@ -277,7 +279,7 @@ define Package/luci-mod-admin-core/extra-install
 	touch $(1)/etc/init.d/luci_fixtime || true
 endef
 
-$(eval $(call module,admin-core,Web UI Core module,+luci-lib-web +luci-proto-core +luci-i18n-english))
+$(eval $(call module,admin-core,Web UI Core module,+luci-lib-web +luci-proto-core +luci-i18n-chinese))
 $(eval $(call module,admin-mini,LuCI Essentials - stripped down and user-friendly,+luci-mod-admin-core @BROKEN))
 $(eval $(call module,admin-full,LuCI Administration - full-featured for full control,+luci-mod-admin-core +luci-lib-ipkg))
 $(eval $(call module,failsafe,LuCI Fail-Safe - Fail-Safe sysupgrade module,+luci-mod-admin-core))
@@ -461,6 +463,19 @@ $(eval $(call application,transmission,LuCI Support for Transmission,\
 $(eval $(call application,watchcat,LuCI Support for Watchcat,\
 	+PACKAGE_luci-app-watchcat:watchcat))
 
+### Custom App ###
+
+$(eval $(call application,aria2,aria2 configuration module,\
+        +PACKAGE_luci-app-aria2:aria2))
+
+$(eval $(call application,RSS,RSS configuration module,\
+        +PACKAGE_luci-app-RSS:leech))
+
+$(eval $(call application,guide,guide configuration module))
+
+$(eval $(call application,webshell,webshell configuration module))
+
+
 ### Server Gateway Interfaces ###
 define sgi
   define Package/luci-sgi-$(1)
@@ -517,6 +532,7 @@ endef
 $(eval $(call theme,base,Common base for all themes))
 $(eval $(call theme,openwrt,OpenWrt.org (default),,,1))
 $(eval $(call theme,bootstrap,Bootstrap Theme))
+$(eval $(call theme,openwrtcn,openwrtcn Theme))
 
 $(eval $(call theme,freifunk-bno,Freifunk Berlin Nordost Theme,\
 	Stefan Pirwitz <stefan-at-freifunk-bno-dot-de>))
@@ -592,7 +608,7 @@ endef
 $(eval $(call collection,,\
 	Standard OpenWrt set including full admin with ppp support and the \
 	default OpenWrt theme,\
-	+uhttpd +luci-mod-admin-full +luci-theme-openwrt +luci-app-firewall \
+	+uhttpd +luci-mod-admin-full +luci-theme-freifunk-generic +luci-app-firewall \
 	+luci-proto-core +luci-proto-ppp +libiwinfo-lua))
 
 $(eval $(call collection,ssl,\
@@ -612,11 +628,12 @@ include $(INCLUDE_DIR)/package.mk
 ifeq ($(USELOCAL),1)
   define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
-	$(TAR) c -C ../../../ . \
-		--exclude=.pc --exclude=.svn --exclude=.git \
-		--exclude='boa-0*' --exclude='*.o' --exclude='*.so' \
-		--exclude=dist | \
-			tar x -C $(PKG_BUILD_DIR)/
+#	$(TAR) c -C ../../../ . \
+#		--exclude=.pc --exclude=.svn --exclude=.git \
+#		--exclude='boa-0*' --exclude='*.o' --exclude='*.so' \
+#		--exclude=dist | \
+#			tar x -C $(PKG_BUILD_DIR)/
+	cp -r ./luci/* $(PKG_BUILD_DIR)
   endef
 endif
 

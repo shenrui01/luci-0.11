@@ -1,0 +1,97 @@
+#!/bin/sh /etc/rc.common
+# RA MOD
+
+START=99
+
+aria2_config() {
+
+	config_get enable $1 enable 0
+	config_get path $1 path /dev/null
+	config_get download_folder $1 download_folder Downloads
+	config_get download_limit $1 download_limit 0
+	config_get upload_limit $1 upload_limit 0
+	config_get btmaxpeers $1 btmaxpeers 25
+	config_get maxjobs $1 maxjobs 5
+	config_get maxthread $1 maxthread 4
+	config_get tcp_port $1 tcp_port 51413
+	config_get udp_port $1 udp_port 51413
+	config_get seedtime $1 seedtime 525600
+	config_get rpc_user $1 rpc_user
+	config_get rpc_passwd $1 rpc_passwd
+
+	local misc
+
+	[ "$enable" = "0" ] && stop && return 0
+
+	aria2_conf_path="$path/.aria2"
+
+	[ ! -d "$aria2_conf_path" ] && mkdir -p "$aria2_conf_path"
+	[ ! -f "$aria2_conf_path/aria2file.txt" ] && touch "$aria2_conf_path/aria2file.txt"
+	[ ! -f "$aria2_conf_path/dht.dat" ] && touch "$aria2_conf_path/dht.dat"
+
+	[ ! -s "$aria2_conf_path/aria2.conf" ] && {
+			cat > "$aria2_conf_path/aria2.conf" << EOF
+# General Setting
+#
+continue
+file-allocation=trunc
+peer-id-prefix=-TR2610-
+user-agent=Transmission/2.61 (13407)
+enable-mmap
+event-poll=epoll
+on-download-complete=/etc/aria2/post
+
+# Connection Setting
+#
+disable-ipv6
+check-certificate=false
+min-split-size=1M
+
+# BitTorrent Setting
+#
+enable-dht
+enable-dht6=false
+enable-peer-exchange
+bt-enable-lpd
+bt-seed-unverified
+bt-save-metadata
+bt-hash-check-seed
+bt-remove-unselected-file
+bt-stop-timeout=900
+seed-ratio=0.0
+EOF
+	}
+
+	# Check if previous session not saved and torrents exist then load them to aria2
+	[ -s "$aria2_conf_path/aria2file.txt" ] || {
+		[ -d "$path/$download_folder" -a `ls $path/$download_folder/*.torrent | wc -l` -ge "1" ] && {
+			for i in $path/$download_folder/*.torrent
+			do
+				echo "$i" >> "$aria2_conf_path/aria2file.txt"
+			done
+			misc="--pause"
+		}
+	}
+
+	aria2c -c -D --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all $misc \
+	--seed-time=$seedtime --conf-path="$aria2_conf_path/aria2.conf" --dir="$path/$download_folder" \
+	--input-file="$aria2_conf_path/aria2file.txt" --save-session="$aria2_conf_path/aria2file.txt" \
+	--dht-file-path="$aria2_conf_path/dht.dat" --rpc-user=$rpc_user --rpc-passwd=$rpc_passwd \
+	--max-overall-download-limit=$download_limit --max-overall-upload-limit=$upload_limit \
+	--bt-max-peers=$btmaxpeers --split=$maxthread --max-connection-per-server=$maxthread \
+	--max-concurrent-downloads=$maxjobs --listen-port=$tcp_port --dht-listen-port=$udp_port
+}
+
+start() {
+	[ -n `mount | grep /dev/sda | cut -d " " -f3` ] && {
+		config_load aria2
+		config_foreach aria2_config aria2
+	}
+}
+
+stop() {
+	# must interrupt it to save session
+	killall -2 aria2c
+	sleep 3	
+}
+
