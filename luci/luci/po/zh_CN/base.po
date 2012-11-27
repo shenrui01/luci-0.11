@@ -2820,8 +2820,82 @@ msgstr "磁盘分区信息"
 msgid "blkid uuid infomation"
 msgstr "UUID等信息"
 
+msgid "Quick Guide"
+msgstr "快速向导"
+
+msgid "Quick guide"
+msgstr "快速向导"
+
+msgid "Quick guide Fast configuration route"
+msgstr ""
+"快速向导，使用本配置向导，您可以设置上网所需的基本网络参数。即使您对网络知识"
+"不太熟悉，也可以按照提示轻松的完成设置。您也可以直接到菜单项中选择您需要修改"
+"的设置项进行设置。要继续，请单击“下一步”。 要退出设置向导，请单击『退出向"
+"导』，必须正确选择路由的型号"
+
 msgid "Guide Next Step"
 msgstr "下一步"
 
 msgid "Guide Quit"
 msgstr "退出向导"
+
+msgid "guide_config WAN Configuration"
+msgstr "配置WAN口"
+
+msgid "protocol Protocol"
+msgstr "接入协议"
+
+msgid "static"
+msgstr "静态"
+
+msgid "username Username"
+msgstr "用户名"
+
+msgid "password Password"
+msgstr "密码"
+
+msgid "macaddress MAC"
+msgstr "MAC地址"
+
+msgid "guide_mac_desc Just leave blank and use the default mac generally"
+msgstr "留空，使用默认MAC,请使用格式如：00:33:44:55:66:77"
+
+msgid "guide_lan_config LAN Configuration"
+msgstr "配置LAN口"
+
+msgid "ipaddress Address"
+msgstr "IP地址"
+
+msgid "netmask Netmask"
+msgstr "子网掩码"
+
+msgid ""
+"guide_end_desc The guide is now OK. Please click button \"apply\" to apply "
+"or Click button \"quit\" to quit"
+msgstr "向导现在已经完成，如果需要应用请按下应用，否则按下退出"
+
+msgid "guide_apply Apply"
+msgstr "应用向导"
+
+msgid "guide_quit Quit"
+msgstr "退出向导"
+
+msgid ""
+"guide_ok_desc Everything is OK, Just enjoy it. System is now jumping to main "
+"page....."
+msgstr "向导设置已经完成，系统将进入主页面，"
+
+msgid "gateway Gateway"
+msgstr "网关"
+
+msgid "dnsserver"
+msgstr "dns服务器"
+
+msgid "guide_gateway_desc If you don t know, just to contact your ISP"
+msgstr "输入网关，如果不知道请与ISP联系"
+
+msgid "guide_dns_desc If you don t know, just to contact your ISP"
+msgstr "输入dns服务器，如果不知道请与ISP联系"
+
+msgid "cbi_manual"
+msgstr "自定义"
