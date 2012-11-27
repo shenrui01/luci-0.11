@@ -85,7 +85,7 @@ $Id: index.htm 9069 2012-08-17 15:06:46Z jow $
 		return
 	end
 
-	local system, model = luci.sys.sysinfo()
+	local system, model , _, _,_, _, bogomips, cpuclock, flashsize= luci.sys.sysinfo()
 -%>
 
 <%+header%>
@@ -510,10 +510,12 @@ $Id: index.htm 9069 2012-08-17 15:06:46Z jow $
 
 	<table width="100%" cellspacing="10">
 		<tr><td width="33%"><%:Router Name%></td><td><%=luci.sys.hostname() or "?"%></td></tr>
-		<tr><td width="33%"><%:Router Model%></td><td><%=pcdata(model or "?")%></td></tr>
+		<tr><td width="33%"><%:Router Model%></td><td><%=pcdata(system  or "?")%></td></tr>
+		<tr><td width="33%"><%:Cpu Model%></td><td><%=pcdata(model or "?")%></td></tr>
+		<tr><td width="33%"><%:Cpu Clock%></td><td><%=pcdata(cpuclock or "?")%>MHz</td></tr>
+		<tr><td width="33%"><%:Flash Size%></td><td><%=pcdata(flashsize /1024 or "?")%>M</td></tr>
 		<tr><td width="33%"><%:Firmware Version%></td><td>
-			<%=pcdata(luci.version.distname)%> <%=pcdata(luci.version.distversion)%> /
-			<%=pcdata(luci.version.luciname)%> (<%=pcdata(luci.version.luciversion)%>)
+			<%=pcdata(luci.version.distname)%> <%=pcdata(luci.version.distversion)%>【<%=pcdata(luci.version.luciversion)%>】
 		</td></tr>
 		<tr><td width="33%"><%:Kernel Version%></td><td><%=luci.sys.exec("uname -r")%></td></tr>
 		<tr><td width="33%"><%:Local Time%></td><td id="localtime">-</td></tr>

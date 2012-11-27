@@ -1925,7 +1925,7 @@ msgid "Router Model"
 msgstr "路由型号"
 
 msgid "Router Name"
-msgstr "系统名称"
+msgstr "路由器名称"
 
 msgid "Router Password"
 msgstr "路由密码"
@@ -2899,3 +2899,12 @@ msgstr "输入dns服务器，如果不知道请与ISP联系"
 
 msgid "cbi_manual"
 msgstr "自定义"
+
+msgid "Cpu Clock"
+msgstr "CPU主频"
+
+msgid "Cpu Model"
+msgstr "CPU型号"
+
+msgid "Flash Size"
+msgstr "闪存容量"

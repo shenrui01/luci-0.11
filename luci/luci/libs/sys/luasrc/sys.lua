@@ -176,21 +176,22 @@ function sysinfo()
 	local memfree = tonumber(meminfo:match("MemFree:%s*(%d+)"))
 	local membuffers = tonumber(meminfo:match("Buffers:%s*(%d+)"))
 	local bogomips = tonumber(cpuinfo:match("[Bb]ogo[Mm][Ii][Pp][Ss].-: ([^\n]+)")) or 0
-
-	local system =
-		cpuinfo:match("system type\t+: ([^\n]+)") or
+	local cpuclock = tonumber(cpuinfo:match("[Cc][Pp][Uu][Cc]lock.-: ([^\n]+)")) or 0
+	local flashsize = tonumber(cpuinfo:match("[Ff][Ll][Aa][Ss][Hh][Ss]ize.-: ([^\n]+)")) or 0
+	local model =
 		cpuinfo:match("Processor\t+: ([^\n]+)") or
+		cpuinfo:match("system type\t+: ([^\n]+)") or
+		cpuinfo:match("cpu model\t+: ([^\n]+)") or
 		cpuinfo:match("model name\t+: ([^\n]+)")
 
-	local model =
-		luci.util.pcdata(fs.readfile("/tmp/sysinfo/model")) or
+	local system =
 		cpuinfo:match("machine\t+: ([^\n]+)") or
 		cpuinfo:match("Hardware\t+: ([^\n]+)") or
 		luci.util.pcdata(fs.readfile("/proc/diag/model")) or
 		nixio.uname().machine or
 		system
 
-	return system, model, memtotal, memcached, membuffers, memfree, bogomips
+	return system, model, memtotal, memcached, membuffers, memfree, bogomips, cpuclock, flashsize
 end
 
 --- Retrieves the output of the "logread" command.
