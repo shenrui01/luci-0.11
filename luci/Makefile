@@ -608,7 +608,7 @@ endef
 $(eval $(call collection,,\
 	Standard OpenWrt set including full admin with ppp support and the \
 	default OpenWrt theme,\
-	+uhttpd +luci-mod-admin-full +luci-theme-freifunk-generic +luci-app-firewall \
+	+uhttpd +luci-mod-admin-full +luci-theme-openwrt +luci-app-firewall \
 	+luci-proto-core +luci-proto-ppp +libiwinfo-lua))
 
 $(eval $(call collection,ssl,\
