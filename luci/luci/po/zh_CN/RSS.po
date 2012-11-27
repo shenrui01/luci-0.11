@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: RA <ravageralpha@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid ""
+"ANY using asterisk , AND using ['plus'] , OR using [ 'space' , 'comma' , "
+"'semicolon' ]"
+msgstr ""
+"全部用星号 , 关键字之间用加号(+)相连为AND操作 , 用空格、逗号、分号为OR操作"
+
+msgid "Auto import to aria2 RPC"
+msgstr "自动导入到aria2 RPC"
+
+msgid "Basic Settings"
+msgstr "基本设置"
+
+msgid "Comment Using #"
+msgstr "用#注释"
+
+msgid "Enable"
+msgstr "启动"
+
+msgid "Hours , zero mean run once"
+msgstr "小时 , 0的话只执行一次"
+
+msgid "Interval"
+msgstr "扫描间隔"
+
+msgid "Keywords"
+msgstr "关键字"
+
+msgid "Max Task"
+msgstr "最大任务数"
+
+msgid "Max fetch per feed"
+msgstr "每个RSS Feed最大抓取任务数"
+
+msgid "Put your RSS feeds here line by line"
+msgstr "你订阅的PT RSS地址, 请用带passkey的地址, 多个请分行"
+
+msgid "RSS Feeds"
+msgstr "RSS 订阅地址"
+
+msgid "RSS for PT"
+msgstr "PT订阅下载"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Torrent Folder"
+msgstr "种子文件夹"
+
+msgid "Where your torrent files save"
+msgstr "保存下载的种子和任务历史数据库的文件夹 (* 必须填好)"

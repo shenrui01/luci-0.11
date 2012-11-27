@@ -1,0 +1,52 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid ""
+"ANY using asterisk , AND using ['plus'] , OR using [ 'space' , 'comma' , "
+"'semicolon' ]"
+msgstr ""
+
+msgid "Auto import to aria2 RPC"
+msgstr ""
+
+msgid "Basic Settings"
+msgstr ""
+
+msgid "Comment Using #"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Hours , zero mean run once"
+msgstr ""
+
+msgid "Interval"
+msgstr ""
+
+msgid "Keywords"
+msgstr ""
+
+msgid "Max Task"
+msgstr ""
+
+msgid "Max fetch per feed"
+msgstr ""
+
+msgid "Put your RSS feeds here line by line"
+msgstr ""
+
+msgid "RSS Feeds"
+msgstr ""
+
+msgid "RSS for PT"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Torrent Folder"
+msgstr ""
+
+msgid "Where your torrent files save"
+msgstr ""

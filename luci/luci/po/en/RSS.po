@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: RA <ravageralpha@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid ""
+"ANY using asterisk , AND using ['plus'] , OR using [ 'space' , 'comma' , "
+"'semicolon' ]"
+msgstr ""
+"ANY using asterisk[*] , AND using ['plus'] , OR using [ 'space' , 'comma' , "
+"'semicolon' ]"
+
+msgid "Auto import to aria2 RPC"
+msgstr "Auto import to aria2 RPC"
+
+msgid "Basic Settings"
+msgstr "Basic Settings"
+
+msgid "Comment Using #"
+msgstr "Comment Using #"
+
+msgid "Enable"
+msgstr "Enable"
+
+msgid "Hours , zero mean run once"
+msgstr "Hours , zero mean run once"
+
+msgid "Interval"
+msgstr "Interval"
+
+msgid "Keywords"
+msgstr "Keywords"
+
+msgid "Max Task"
+msgstr "Max Task"
+
+msgid "Max fetch per feed"
+msgstr "Max fetch per feed"
+
+msgid "Put your RSS feeds here line by line"
+msgstr "Put your RSS feeds here line by line"
+
+msgid "RSS Feeds"
+msgstr "RSS Feeds"
+
+msgid "RSS for PT"
+msgstr "RSS for PT"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Torrent Folder"
+msgstr "Torrent Folder"
+
+msgid "Where your torrent files save"
+msgstr "Where your torrent files save"

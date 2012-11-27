@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: RA <ravageralpha@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid "BT/PT Max Peers"
+msgstr "BT/PT任务最大连接数"
+
+msgid "Basic Settings"
+msgstr "基本设置"
+
+msgid "Comment Using #"
+msgstr "注释用#"
+
+msgid "Default 5"
+msgstr "默认值: 5"
+
+msgid "Default 5 , Max 20"
+msgstr "默认 5线程, 最大20线程"
+
+msgid "Default 51413"
+msgstr "默认端口: 51413 (PT的尽量避免用传统端口，推荐默认)"
+
+msgid "Default Bytes"
+msgstr "默认单位为字节, 可加后缀 K 或 M (例如 250K 或 1M )"
+
+msgid "Device"
+msgstr "下载用的设备"
+
+msgid "Download Folder"
+msgstr "下载文件夹"
+
+msgid "Download Limit"
+msgstr "下载速度限制"
+
+msgid "Edit Configuration"
+msgstr "修改配置文件"
+
+msgid "Enable"
+msgstr "启动"
+
+msgid "Make sure you have mounted USB Storage device"
+msgstr "请确保已经挂载好USB存储设备，否则无法启动"
+
+msgid "Max Concurrent Queue"
+msgstr "最大并发任务数"
+
+msgid "Max Thread"
+msgstr "下载线程"
+
+msgid "Minute"
+msgstr "分钟"
+
+msgid "RPC Password"
+msgstr "RPC 密码"
+
+msgid "RPC Username"
+msgstr "RPC 用户名"
+
+msgid "Recommand 25"
+msgstr "推荐 25, 太大会影响浏览网页速度"
+
+msgid "Seed Time"
+msgstr "做种时间"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "TCP Port"
+msgstr "TCP 端口"
+
+msgid "UDP Port"
+msgstr "UDP 端口"
+
+msgid "Upload Limit"
+msgstr "上传速度限制"
+
+msgid "Where Your Files Save"
+msgstr "保存下载文件的文件夹"
+
+msgid "You can customize aria2 configuration here"
+msgstr "可以在这里修改aria2的设置，详细请搜索aria2相关帮助文档"
+
+msgid "Your RPC Password"
+msgstr "RPC 用户密码"
+
+msgid "Your RPC Username"
+msgstr "RPC 用户账号"
+
+msgid "aria2 Downloader"
+msgstr "aria2下载工具"

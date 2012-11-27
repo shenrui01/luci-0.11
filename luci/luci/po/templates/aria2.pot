@@ -1,0 +1,89 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "BT/PT Max Peers"
+msgstr ""
+
+msgid "Basic Settings"
+msgstr ""
+
+msgid "Comment Using #"
+msgstr ""
+
+msgid "Default 5"
+msgstr ""
+
+msgid "Default 5 , Max 20"
+msgstr ""
+
+msgid "Default 51413"
+msgstr ""
+
+msgid "Default Bytes"
+msgstr ""
+
+msgid "Device"
+msgstr ""
+
+msgid "Download Folder"
+msgstr ""
+
+msgid "Download Limit"
+msgstr ""
+
+msgid "Edit Configuration"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Make sure you have mounted USB Storage device"
+msgstr ""
+
+msgid "Max Concurrent Queue"
+msgstr ""
+
+msgid "Max Thread"
+msgstr ""
+
+msgid "Minute"
+msgstr ""
+
+msgid "RPC Password"
+msgstr ""
+
+msgid "RPC Username"
+msgstr ""
+
+msgid "Recommand 25"
+msgstr ""
+
+msgid "Seed Time"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "TCP Port"
+msgstr ""
+
+msgid "UDP Port"
+msgstr ""
+
+msgid "Upload Limit"
+msgstr ""
+
+msgid "Where Your Files Save"
+msgstr ""
+
+msgid "You can customize aria2 configuration here"
+msgstr ""
+
+msgid "Your RPC Password"
+msgstr ""
+
+msgid "Your RPC Username"
+msgstr ""
+
+msgid "aria2 Downloader"
+msgstr ""
