@@ -1,6 +1,5 @@
 config core main
-	option lang auto
-	option mediaurlbase /luci-static/openwrt.org
+	option lang zh_cn
 	option resourcebase /luci-static/resources
 	
 config extern flash_keep
