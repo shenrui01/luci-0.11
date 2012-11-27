@@ -1,26 +1,27 @@
 --[[
-LuCI - Lua Configuration Interface
+LuCI - Lua Configuration Interface - Aria2 support
 
-Copyright 2008 Steven Barth <steven@midlink.org>
-Copyright 2008 Jo-Philipp Wich <xm@leipzig.freifunk.net>
+Script by animefans_xj @ nowvideo.dlinkddns.com (af_xj@yahoo.com.cn)
 
-Licensed under the Apache License, Version 2.0 (the "License");
+Licensed under the Apache License, Version 2.0 (the "license");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+you may obtain a copy of the License at
 
 	http://www.apache.org/licenses/LICENSE-2.0
+
+$Id$
 ]]--
 
-module("luci.controller.aria2", package.seeall)
+module("luci.controller.aria2",package.seeall)
 
 function index()
-	
+	require("luci.i18n")
+	luci.i18n.loadc("aria2")
 	if not nixio.fs.access("/etc/config/aria2") then
 		return
 	end
-
-	local page
-	page = entry({"admin", "diskapply", "aria2"}, cbi("aria2"), _("aria2 Downloader"))
-	page.i18n = "aria2"
-	page.dependent = true
+	
+	local page = entry({"admin","services","aria2"},cbi("aria2"),_("Aria2 Downloader"))
+	page.i18n="aria2"
+	page.dependent=true
 end

@@ -1,9 +1,0 @@
-#!/bin/sh
-urldecode(){
-  echo -e "$(sed 's/+/ /g; s/%/\\x/g')"
-}
-
-rawfile="$3"
-newfile="$(dirname "$rawfile")/$(basename "$rawfile" | urldecode)"
-
-[ "$rawfile" != "$newfile" ] && mv "$rawfile" "$newfile"
