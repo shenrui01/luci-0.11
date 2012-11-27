@@ -21,6 +21,23 @@ s.anonymous = true
 s:tab("general",  translate("General Settings"))
 s:tab("template", translate("Edit Template"))
 
+e = s:taboption("general", Flag, "_init", translate("Start Samba service"))
+e.rmempty  = false
+
+function e.cfgvalue(self, section)
+	return luci.sys.init.enabled("samba") and self.enabled or self.disabled
+end
+
+function e.write(self, section, value)
+	if value == "1" then
+		luci.sys.call("/etc/init.d/samba enable >/dev/null")
+		luci.sys.call("/etc/init.d/samba start >/dev/null")
+	else
+		luci.sys.call("/etc/init.d/samba stop >/dev/null")
+		luci.sys.call("/etc/init.d/samba disable >/dev/null")
+	end
+end
+
 s:taboption("general", Value, "name", translate("Hostname"))
 s:taboption("general", Value, "description", translate("Description"))
 s:taboption("general", Value, "workgroup", translate("Workgroup"))
