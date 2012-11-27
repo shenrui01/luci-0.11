@@ -24,9 +24,7 @@ arg[1] = arg[1] or ""
 
 m = Map("firewall",
 	translate("Firewall - Traffic Rules"),
-	translate("This page allows you to change advanced properties of the \
-	           traffic rule entry, such as matched source and destination \
-			   hosts."))
+	translate("This page allows you to change advanced properties of the traffic rule entry, such as matched source and destination hosts."))
 
 m.redirect = dsp.build_url("admin/network/firewall/rules")
 

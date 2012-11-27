@@ -17,9 +17,7 @@ local ft = require "luci.tools.firewall"
 
 m = Map("firewall",
 	translate("Firewall - Traffic Rules"),
-	translate("Traffic rules define policies for packets traveling between \
-		different zones, for example to reject traffic between certain hosts \
-		or to open WAN ports on the router."))
+	translate("Traffic rules define policies for packets traveling between different zones, for example to reject traffic between certain hosts or to open WAN ports on the router."))
 
 --
 -- Rules
@@ -188,9 +186,7 @@ ft.opt_enabled(s, Flag, translate("Enable")).width = "1%"
 
 s = m:section(TypedSection, "redirect",
 	translate("Source NAT"),
-	translate("Source NAT is a specific form of masquerading which allows \
-		fine grained control over the source IP used for outgoing traffic, \
-		for example to map multiple WAN addresses to internal subnets."))
+	translate("Source NAT is a specific form of masquerading which allows fine grained control over the source IP used for outgoing traffic, for example to map multiple WAN addresses to internal subnets."))
 s.template  = "cbi/tblsection"
 s.addremove = true
 s.anonymous = true

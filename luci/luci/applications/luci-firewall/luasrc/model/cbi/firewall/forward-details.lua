@@ -22,9 +22,7 @@ arg[1] = arg[1] or ""
 
 m = Map("firewall",
 	translate("Firewall - Port Forwards"),
-	translate("This page allows you to change advanced properties of the port \
-	           forwarding entry. In most cases there is no need to modify \
-			   those settings."))
+	translate("This page allows you to change advanced properties of the port forwarding entry. In most cases there is no need to modify those settings."))
 
 m.redirect = dsp.build_url("admin/network/firewall/forwards")
 
@@ -144,8 +142,7 @@ o.template = "cbi/firewall_zonelist"
 
 
 o = s:option(Value, "dest_ip", translate("Internal IP address"),
-	translate("Redirect matched incoming traffic to the specified \
-		internal host"))
+	translate("Redirect matched incoming traffic to the specified internal host"))
 o.datatype = "ip4addr"
 
 luci.sys.net.ipv4_hints(function(ip, name)
@@ -155,8 +152,7 @@ end)
 
 o = s:option(Value, "dest_port",
 	translate("Internal port"),
-	translate("Redirect matched incoming traffic to the given port on \
-		the internal host"))
+	translate("Redirect matched incoming traffic to the given port on the internal host"))
 o.placeholder = translate("any")
 o.datatype = "portrange"
 

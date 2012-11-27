@@ -82,7 +82,7 @@ msgid "network"
 msgstr "网络"
 
 msgid "Event interface"
-msgstr ""
+msgstr "网络接口"
 
 msgid "On which interface up should start the ddns script process."
-msgstr ""
+msgstr "选择DDNS要使用的网络借口"

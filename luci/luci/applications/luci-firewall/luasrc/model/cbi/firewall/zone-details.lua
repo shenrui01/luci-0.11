@@ -44,13 +44,7 @@ end
 
 s = m:section(NamedSection, zone.sid, "zone",
 	translatef("Zone %q", zone:name()),
-	translatef("This section defines common properties of %q. \
-		The <em>input</em> and <em>output</em> options set the default \
-		policies for traffic entering and leaving this zone while the \
-		<em>forward</em> option describes the policy for forwarded traffic \
-		between different networks within the zone. \
-		<em>Covered networks</em> specifies which available networks are \
-		member of this zone.", zone:name()))
+	translatef("This section defines common properties of %q. The <em>input</em> and <em>output</em> options set the default policies for traffic entering and leaving this zone while the <em>forward</em> option describes the policy for forwarded traffic between different networks within the zone. <em>Covered networks</em> specifies which available networks are member of this zone.", zone:name()))
 
 s.anonymous = true
 s.addremove = false
@@ -169,13 +163,7 @@ lim:depends("log", "1")
 
 s2 = m:section(NamedSection, zone.sid, "fwd_out",
 	translate("Inter-Zone Forwarding"),
-	translatef("The options below control the forwarding policies between \
-		this zone (%s) and other zones. <em>Destination zones</em> cover \
-		forwarded traffic <strong>originating from %q</strong>. \
-		<em>Source zones</em> match forwarded traffic from other zones \
-		<strong>targeted at %q</strong>. The forwarding rule is \
-		<em>unidirectional</em>, e.g. a forward from lan to wan does \
-		<em>not</em> imply a permission to forward from wan to lan as well.",
+	translatef("The options below control the forwarding policies between this zone (%s) and other zones. <em>Destination zones</em> cover forwarded traffic <strong>originating from %q</strong>. <em>Source zones</em> match forwarded traffic from other zones <strong>targeted at %q</strong>. The forwarding rule is <em>unidirectional</em>, e.g. a forward from lan to wan does <em>not</em> imply a permission to forward from wan to lan as well.",
 		zone:name(), zone:name(), zone:name()
 
 	))

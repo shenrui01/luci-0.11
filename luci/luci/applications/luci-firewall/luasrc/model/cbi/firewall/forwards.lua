@@ -16,9 +16,7 @@ local ds = require "luci.dispatcher"
 local ft = require "luci.tools.firewall"
 
 m = Map("firewall", translate("Firewall - Port Forwards"),
-	translate("Port forwarding allows remote computers on the Internet to \
-	           connect to a specific computer or service within the \
-	           private LAN."))
+	translate("Port forwarding allows remote computers on the Internet to connect to a specific computer or service within the private LAN."))
 
 --
 -- Port Forwards
