@@ -30,7 +30,7 @@ for i, dev in ipairs(devices) do
 end
 
 
-m = Map("fstab", translate("Mount Points"))
+m = Map("fstab", translate("Mount Points"),translate("Mount Points desc"))
 
 local mounts = luci.sys.mounts()
 
@@ -58,12 +58,42 @@ function used.cfgvalue(self, section)
 end
 
 
+local mounts = luci.sys.swapfree()
+
+v = m:section(Table, mounts, translate("Mounted Swap file systems"))
+
+fs = v:option(DummyValue, "fs", translate("Filesystem"))
+
+total = v:option(DummyValue, "total", translate("total"))
+function total.cfgvalue(self, section)
+	return luci.tools.webadmin.byte_format(
+		( tonumber(mounts[section].total) or 0 ) * 1024
+	)
+end
+
+used = v:option(DummyValue, "used", translate("used"))
+function used.cfgvalue(self, section)
+	return luci.tools.webadmin.byte_format(
+		( tonumber(mounts[section].used) or 0 ) * 1024
+	) 
+end
+
+free = v:option(DummyValue, "free", translate("free"))
+function free.cfgvalue(self, section)
+	return luci.tools.webadmin.byte_format(
+		( tonumber(mounts[section].free) or 0 ) * 1024
+	) 
+end
+
+
+
+
 
 mount = m:section(TypedSection, "mount", translate("Mount Points"), translate("Mount Points define at which point a memory device will be attached to the filesystem"))
 mount.anonymous = true
 mount.addremove = true
 mount.template = "cbi/tblsection"
-mount.extedit  = luci.dispatcher.build_url("admin/system/fstab/mount/%s")
+mount.extedit  = luci.dispatcher.build_url("admin/diskapply/fstab/mount/%s")
 
 mount.create = function(...)
 	local sid = TypedSection.create(...)
@@ -76,7 +106,7 @@ end
 
 mount:option(Flag, "enabled", translate("Enabled")).rmempty = false
 
-dev = mount:option(DummyValue, "device", translate("Device"))
+dev = mount:option(DummyValue, "device", translate("Device UUID"))
 dev.cfgvalue = function(self, section)
 	local v
 
@@ -86,6 +116,14 @@ dev.cfgvalue = function(self, section)
 	v = m.uci:get("fstab", section, "label")
 	if v then return "Label: %s" % v end
 
+	v = Value.cfgvalue(self, section) or "?"
+	return size[v] and "%s (%s MB)" % {v, size[v]} or v
+end
+
+
+dev2 = mount:option(DummyValue, "device", translate("Device"))
+dev2.cfgvalue = function(self, section)
+	local v
 	v = Value.cfgvalue(self, section) or "?"
 	return size[v] and "%s (%s MB)" % {v, size[v]} or v
 end
@@ -126,7 +164,7 @@ swap = m:section(TypedSection, "swap", "SWAP", translate("If your physical memor
 swap.anonymous = true
 swap.addremove = true
 swap.template = "cbi/tblsection"
-swap.extedit  = luci.dispatcher.build_url("admin/system/fstab/swap/%s")
+swap.extedit  = luci.dispatcher.build_url("admin/diskapply/fstab/swap/%s")
 
 swap.create = function(...)
 	local sid = TypedSection.create(...)
@@ -139,7 +177,7 @@ end
 
 swap:option(Flag, "enabled", translate("Enabled")).rmempty = false
 
-dev = swap:option(DummyValue, "device", translate("Device"))
+dev = swap:option(DummyValue, "device", translate("Device UUID"))
 dev.cfgvalue = function(self, section)
 	local v
 
@@ -153,4 +191,11 @@ dev.cfgvalue = function(self, section)
 	return size[v] and "%s (%s MB)" % {v, size[v]} or v
 end
 
+dev2 = swap:option(DummyValue, "device", translate("Device"))
+dev2.cfgvalue = function(self, section)
+	local v
+
+	v = Value.cfgvalue(self, section) or "?"
+	return size[v] and "%s (%s MB)" % {v, size[v]} or v
+end
 return m

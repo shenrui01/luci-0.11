@@ -15,9 +15,9 @@ $Id: backupfiles.lua 7798 2011-10-26 23:43:04Z jow $
 
 
 if luci.http.formvalue("cbid.luci.1._list") then
-	luci.http.redirect(luci.dispatcher.build_url("admin/system/flashops/backupfiles") .. "?display=list")
+	luci.http.redirect(luci.dispatcher.build_url("admin/flashops/backupfiles") .. "?display=list")
 elseif luci.http.formvalue("cbid.luci.1._edit") then
-	luci.http.redirect(luci.dispatcher.build_url("admin/system/flashops/backupfiles") .. "?display=edit")
+	luci.http.redirect(luci.dispatcher.build_url("admin/flashops/backupfiles") .. "?display=edit")
 	return
 end
 
