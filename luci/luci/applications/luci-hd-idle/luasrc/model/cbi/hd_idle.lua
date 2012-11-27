@@ -15,7 +15,7 @@ $Id: hd_idle.lua 6063 2010-04-14 08:58:08Z ben $
 
 require("nixio.fs")
 
-m = Map("hd-idle", "hd-idle",
+m = Map("hd-idle", translate("hd-idle"),
 	translate("hd-idle is a utility program for spinning-down external " ..
 		"disks after a period of idle time."))
 

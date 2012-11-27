@@ -16,6 +16,8 @@ $Id: p910nd.lua 7362 2011-08-12 13:16:27Z jow $
 module("luci.controller.p910nd", package.seeall)
 
 function index()
+	require("luci.i18n")
+	luci.i18n.loadc("p910nd")
 	if not nixio.fs.access("/etc/config/p910nd") then
 		return
 	end

@@ -16,6 +16,8 @@ $Id: samba.lua 7362 2011-08-12 13:16:27Z jow $
 module("luci.controller.samba", package.seeall)
 
 function index()
+	require("luci.i18n")
+	luci.i18n.loadc("samba")
 	if not nixio.fs.access("/etc/config/samba") then
 		return
 	end

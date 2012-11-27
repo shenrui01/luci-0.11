@@ -1,6 +1,8 @@
 module("luci.controller.firewall", package.seeall)
 
 function index()
+	require("luci.i18n")
+	luci.i18n.loadc("firewall")
 	entry({"admin", "network", "firewall"},
 		alias("admin", "network", "firewall", "zones"),
 		_("Firewall"), 60).i18n = "firewall"

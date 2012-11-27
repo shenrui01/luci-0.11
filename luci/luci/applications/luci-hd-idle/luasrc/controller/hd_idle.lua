@@ -16,6 +16,8 @@ $Id: hd_idle.lua 7362 2011-08-12 13:16:27Z jow $
 module("luci.controller.hd_idle", package.seeall)
 
 function index()
+	require("luci.i18n")
+	luci.i18n.loadc("hd_idle")
 	if not nixio.fs.access("/etc/config/hd-idle") then
 		return
 	end

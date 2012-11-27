@@ -2788,32 +2788,40 @@ msgstr "« 后退"
 msgid "WebShell"
 msgstr "Shell终端"
 
-msgid "p910nd - Printer server"
-msgstr "打印服务器"
-
-msgid "Wake on LAN"
-msgstr "网络唤醒"
-
 msgid "diskapply"
 msgstr "磁盘应用"
-
-msgid "hd-idle"
-msgstr "磁盘休眠"
 
 msgid "Diskinfo"
 msgstr "磁盘信息"
 
-msgid "Network Shares"
-msgstr "网络共享"
-
 msgid "Free Memory"
 msgstr "释放内存"
 
-msgid "Port Forwards"
-msgstr "端口转发"
+msgid "Mount Points desc"
+msgstr ""
+" 在这里你可设定你的磁盘的挂载点，默认系统能自动识别磁盘，并且自动写入系统配"
+"置，使用uuid可以锁定挂载点。如系统未能自动挂载，可热插拔一下磁盘。热插拔磁盘"
+"无效的情况下，可进入『磁盘信息』菜单，查看你的磁盘信息，然后添加新的挂载点，"
+"选择【开启】，基本设置填写【挂载点】、【分区格式】，高级设置填写【UUID】。为"
+"了能更好的利用磁盘，发挥更好的性能，建议使用ext分区"
 
-msgid "Traffic Rules"
-msgstr "通信规则"
+msgid "Mounted Swap file systems"
+msgstr "已挂载的SWAP文件系统"
 
-msgid "Custom Rules"
-msgstr "自定义规则"
+msgid "fdisk Information"
+msgstr "磁盘分区信息"
+
+msgid "Disk Information Desc"
+msgstr "在这里你的查看磁盘分区信息和UUID等信息，方便在『挂载点』页面设置"
+
+msgid "fdisk Information"
+msgstr "磁盘分区信息"
+
+msgid "blkid uuid infomation"
+msgstr "UUID等信息"
+
+msgid "Guide Next Step"
+msgstr "下一步"
+
+msgid "Guide Quit"
+msgstr "退出向导"

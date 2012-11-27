@@ -16,6 +16,8 @@ $Id: ntpc.lua 7362 2011-08-12 13:16:27Z jow $
 module("luci.controller.ntpc", package.seeall)
 
 function index()
+	require("luci.i18n")
+	luci.i18n.loadc("ntpc")
 	if not nixio.fs.access("/etc/config/ntpclient") then
 		return
 	end
