@@ -1,114 +1,98 @@
 msgid ""
 msgstr ""
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-31 11:45+0800\n"
-"PO-Revision-Date: 2012-11-10 23:20+0800\n"
-"Last-Translator: 穿越蓝天 <af_xj@yahoo.com.cn>\n"
-"Language: cn\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.4\n"
 "Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: RA <ravageralpha@gmail.com>\n"
 "Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
-msgid "Aria2 Downloader"
-msgstr "Aria2 下载器"
+msgid "BT/PT Max Peers"
+msgstr "BT/PT任务最大连接数"
 
-msgid "Open Web Interface"
-msgstr "打开Web控制界面"
+msgid "Basic Settings"
+msgstr "基本设置"
 
-msgid ""
-"Use this page, you can download files from HTTP FTP and BitTorrent via Aria2."
-msgstr "在该页面，你可以利用Aria2下载器来从HTTP、FTP以及BitTorrent获取文件"
+msgid "Comment Using #"
+msgstr "注释用#"
 
-msgid "Global"
-msgstr "全局"
+msgid "Default 5"
+msgstr "默认值: 5"
 
-msgid "Enabled"
-msgstr "启用"
+msgid "Default 5 , Max 20"
+msgstr "默认 5线程, 最大20线程"
 
-msgid "Run daemon as user"
-msgstr "以此用户身份运行"
+msgid "Default 51413"
+msgstr "默认端口: 51413 (PT的尽量避免用传统端口，推荐默认)"
 
-msgid "Location"
-msgstr "位置"
+msgid "Default Bytes"
+msgstr "默认单位为字节, 可加后缀 K 或 M (例如 250K 或 1M )"
 
-msgid "Config Directory"
-msgstr "程序设置目录"
+msgid "Device"
+msgstr "下载用的设备"
 
-msgid "Download Directory"
-msgstr "下载目录"
+msgid "Download Folder"
+msgstr "下载文件夹"
 
-msgid "Task"
-msgstr "任务"
-
-msgid "Restore unfinished task when boot"
-msgstr "启动时自动继续未完成的任务"
-
-msgid "Save interval"
-msgstr "保存进度间隔"
-
-msgid "In seconds, 0 means unsave and let tasks can't be restore"
-msgstr "以秒为单位，0表示不保存并使任务无法续传"
-
-msgid "Download queue size"
-msgstr "下载队列大小"
-
-msgid "Blocks of per task"
-msgstr "任务分块"
-
-msgid "Download threads of per server"
-msgstr "每个服务器线程数"
-
-msgid "Network"
-msgstr "网络"
-
-msgid "Disable IPv6"
-msgstr "禁用IPv6"
-
-msgid "Blocklists"
-msgstr "屏蔽列表"
-
-msgid "Enable Local Peer Discovery"
-msgstr "启用本地用户发现"
-
-msgid "Enable DHT Network"
-msgstr "启用DHT网络获取来源"
-
-msgid "Port for BitTorrent"
-msgstr "BitTorrent端口"
-
-msgid "Download speed limit"
+msgid "Download Limit"
 msgstr "下载速度限制"
 
-msgid "Upload speed limit"
+msgid "Edit Configuration"
+msgstr "修改配置文件"
+
+msgid "Enable"
+msgstr "启动"
+
+msgid "Make sure you have mounted USB Storage device"
+msgstr "请确保已经挂载好USB存储设备，否则无法启动"
+
+msgid "Max Concurrent Queue"
+msgstr "最大并发任务数"
+
+msgid "Max Thread"
+msgstr "下载线程"
+
+msgid "Minute"
+msgstr "分钟"
+
+msgid "RPC Password"
+msgstr "RPC 密码"
+
+msgid "RPC Username"
+msgstr "RPC 用户名"
+
+msgid "Recommand 25"
+msgstr "推荐 25, 太大会影响浏览网页速度"
+
+msgid "Seed Time"
+msgstr "做种时间"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "TCP Port"
+msgstr "TCP 端口"
+
+msgid "UDP Port"
+msgstr "UDP 端口"
+
+msgid "Upload Limit"
 msgstr "上传速度限制"
 
-msgid "In KB/S, 0 means unlimit"
-msgstr "以KB为单位，0表示不限制"
+msgid "Where Your Files Save"
+msgstr "保存下载文件的文件夹"
 
-msgid "Remote Control"
-msgstr "远程控制"
+msgid "You can customize aria2 configuration here"
+msgstr "可以在这里修改aria2的设置，详细请搜索aria2相关帮助文档"
 
-msgid "Use RPC Auth"
-msgstr "需要登录"
+msgid "Your RPC Password"
+msgstr "RPC 用户密码"
 
-msgid "User name"
-msgstr "用户名"
+msgid "Your RPC Username"
+msgstr "RPC 用户账号"
 
-msgid "Password"
-msgstr "密码"
-
-msgid "Advanced"
-msgstr "高级"
-
-msgid "add extra commands"
-msgstr "附加命令"
-
-msgid "Command-Lines"
-msgstr "命令行"
-
-msgid "To check all commands availabled, visit:"
-msgstr "要察看所有可用命令，请访问:"
+msgid "aria2 Downloader"
+msgstr "aria2下载工具"
