@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/applications/luci-statistics/luasrc/statistics/rrdtool/definitions
 http://svn.luci.subsignal.org
 
@@ -332,40 +332,6 @@ stargieg
 
 2332
 
-tcpconns.lua
-file
-
-
-
-
-2012-11-26T22:39:09.000000Z
-777d6ff7e2029d8e5b1f39f8c981d89e
-2011-12-05T14:09:24.924162Z
-8044
-jow
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1009
-
 cpu.lua
 file
 
@@ -399,6 +365,40 @@ stargieg
 
 
 1081
+
+tcpconns.lua
+file
+
+
+
+
+2012-11-26T22:39:09.000000Z
+777d6ff7e2029d8e5b1f39f8c981d89e
+2011-12-05T14:09:24.924162Z
+8044
+jow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1009
 
 df.lua
 file
@@ -468,40 +468,6 @@ jow
 
 1449
 
-iwinfo.lua
-file
-
-
-
-
-2012-11-26T22:39:09.000000Z
-a5b8a9c5411e10771053247d1a0f5d96
-2012-02-19T15:11:23.188111Z
-8311
-stargieg
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1846
-
 irq.lua
 file
 
@@ -535,6 +501,40 @@ jow
 
 
 722
+
+iwinfo.lua
+file
+
+
+
+
+2012-11-26T22:39:09.000000Z
+a5b8a9c5411e10771053247d1a0f5d96
+2012-02-19T15:11:23.188111Z
+8311
+stargieg
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1846
 
 ping.lua
 file

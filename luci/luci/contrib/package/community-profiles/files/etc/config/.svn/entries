@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/contrib/package/community-profiles/files/etc/config
 http://svn.luci.subsignal.org
 
@@ -570,40 +570,6 @@ soma
 
 622
 
-profile_weimar
-file
-
-
-
-
-2012-11-26T22:39:21.000000Z
-c6ede6881410c8439624059d51644461
-2012-07-09T05:53:28.947144Z
-8876
-soma
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-320
-
 profile_wlanljubljana
 file
 
@@ -638,16 +604,16 @@ soma
 
 431
 
-profile_openwireless_bern
+profile_weimar
 file
 
 
 
 
 2012-11-26T22:39:21.000000Z
-b282fc74e7eabcac65c88ced1f631084
-2011-09-28T00:20:56.147143Z
-7576
+c6ede6881410c8439624059d51644461
+2012-07-09T05:53:28.947144Z
+8876
 soma
 
 
@@ -670,7 +636,7 @@ soma
 
 
 
-481
+320
 
 profile_halle
 file
@@ -705,6 +671,40 @@ soma
 
 
 469
+
+profile_openwireless_bern
+file
+
+
+
+
+2012-11-26T22:39:21.000000Z
+b282fc74e7eabcac65c88ced1f631084
+2011-09-28T00:20:56.147143Z
+7576
+soma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+481
 
 profile_bensheim
 file
@@ -808,40 +808,6 @@ soma
 
 539
 
-profile_leipzig
-file
-
-
-
-
-2012-11-26T22:39:21.000000Z
-90aea27f3a365cac663c58f3e0e9f204
-2011-09-28T00:20:56.147143Z
-7576
-soma
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-446
-
 profile_arig_neot_semadar
 file
 
@@ -875,6 +841,40 @@ dgolle
 
 
 686
+
+profile_leipzig
+file
+
+
+
+
+2012-11-26T22:39:21.000000Z
+90aea27f3a365cac663c58f3e0e9f204
+2011-09-28T00:20:56.147143Z
+7576
+soma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+446
 
 profile_guifibages
 file
@@ -910,40 +910,6 @@ soma
 
 647
 
-profile_piraten_dresden
-file
-
-
-
-
-2012-11-26T22:39:21.000000Z
-5a53edfea6cf4a62ad25a26cffb93823
-2011-09-28T00:20:56.147143Z
-7576
-soma
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-384
-
 profile_kiberpipa
 file
 
@@ -977,6 +943,40 @@ soma
 
 
 454
+
+profile_piraten_dresden
+file
+
+
+
+
+2012-11-26T22:39:21.000000Z
+5a53edfea6cf4a62ad25a26cffb93823
+2011-09-28T00:20:56.147143Z
+7576
+soma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+384
 
 profile_seefeld
 file
@@ -1012,40 +1012,6 @@ soma
 
 429
 
-profile_l59
-file
-
-
-
-
-2012-11-26T22:39:21.000000Z
-a8b741ac300a56ee30d03bb9d58f8172
-2011-09-28T00:20:56.147143Z
-7576
-soma
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-371
-
 profile_arig_arad
 file
 
@@ -1079,6 +1045,40 @@ dgolle
 
 
 667
+
+profile_l59
+file
+
+
+
+
+2012-11-26T22:39:21.000000Z
+a8b741ac300a56ee30d03bb9d58f8172
+2011-09-28T00:20:56.147143Z
+7576
+soma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+371
 
 profile_mainz
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/po/ca
 http://svn.luci.subsignal.org
 
@@ -808,16 +808,16 @@ jow
 
 2949
 
-p2pblock.po
+ffwizard.po
 file
 
 
 
 
 2012-11-26T22:39:25.000000Z
-6e8aaf0ea0849726d02b87d348b85d56
-2012-07-01T22:58:12.015022Z
-8867
+51645c2d631a3e3716bc84d4e9deb9bb
+2011-06-10T21:56:30.894800Z
+7124
 jow
 
 
@@ -840,7 +840,7 @@ jow
 
 
 
-1130
+2823
 
 diag_core.po
 file
@@ -876,16 +876,16 @@ jow
 
 680
 
-ffwizard.po
+p2pblock.po
 file
 
 
 
 
 2012-11-26T22:39:25.000000Z
-51645c2d631a3e3716bc84d4e9deb9bb
-2011-06-10T21:56:30.894800Z
-7124
+6e8aaf0ea0849726d02b87d348b85d56
+2012-07-01T22:58:12.015022Z
+8867
 jow
 
 
@@ -908,7 +908,7 @@ jow
 
 
 
-2823
+1130
 
 meshwizard.po
 file
@@ -1012,40 +1012,6 @@ jow
 
 2050
 
-asterisk.po
-file
-
-
-
-
-2012-11-26T22:39:25.000000Z
-2520e85863ac972801bb94e37e89ca7e
-2012-06-27T18:02:40.101725Z
-8800
-jow
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-18244
-
 mmc_over_gpio.po
 file
 
@@ -1079,6 +1045,40 @@ jow
 
 
 775
+
+asterisk.po
+file
+
+
+
+
+2012-11-26T22:39:25.000000Z
+2520e85863ac972801bb94e37e89ca7e
+2012-06-27T18:02:40.101725Z
+8800
+jow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18244
 
 rrdtool.po
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/po/templates
 http://svn.luci.subsignal.org
 
@@ -808,16 +808,16 @@ jow
 
 415
 
-p2pblock.pot
+ffwizard.pot
 file
 
 
 
 
 2012-11-26T22:39:28.000000Z
-e4ddd2b2d0ad19b74ff3b66ca1ebd29c
-2011-02-14T18:01:20.640023Z
-6903
+4cc2b98a2773b49ece626f63a6c8cced
+2011-02-11T18:51:35.673959Z
+6856
 soma
 
 
@@ -840,7 +840,7 @@ soma
 
 
 
-437
+2593
 
 diag_core.pot
 file
@@ -876,16 +876,16 @@ jow
 
 508
 
-ffwizard.pot
+p2pblock.pot
 file
 
 
 
 
 2012-11-26T22:39:28.000000Z
-4cc2b98a2773b49ece626f63a6c8cced
-2011-02-11T18:51:35.673959Z
-6856
+e4ddd2b2d0ad19b74ff3b66ca1ebd29c
+2011-02-14T18:01:20.640023Z
+6903
 soma
 
 
@@ -908,7 +908,7 @@ soma
 
 
 
-2593
+437
 
 voice_core.pot
 file
@@ -978,40 +978,6 @@ jow
 
 11153
 
-tinyproxy.pot
-file
-
-
-
-
-2012-11-26T22:39:28.000000Z
-60924251337977239ebb7adfd69e14ac
-2012-06-27T18:02:40.101725Z
-8800
-jow
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4524
-
 openvpn.pot
 file
 
@@ -1045,6 +1011,40 @@ jow
 
 
 9040
+
+tinyproxy.pot
+file
+
+
+
+
+2012-11-26T22:39:28.000000Z
+60924251337977239ebb7adfd69e14ac
+2012-06-27T18:02:40.101725Z
+8800
+jow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4524
 
 pbx.pot
 file

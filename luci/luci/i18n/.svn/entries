@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/i18n
 http://svn.luci.subsignal.org
 
@@ -26,10 +26,10 @@ jow
 
 ab181a69-ba2e-0410-a84d-ff88ab4c47bc
 
-italian
+ukrainian
 dir
 
-ukrainian
+italian
 dir
 
 russian
@@ -38,10 +38,10 @@ dir
 japanese
 dir
 
-norwegian
+english
 dir
 
-english
+norwegian
 dir
 
 greek
@@ -56,19 +56,19 @@ dir
 portuguese
 dir
 
-malay
+catalan
 dir
 
-catalan
+malay
 dir
 
 romanian
 dir
 
-french
+spanish
 dir
 
-spanish
+french
 dir
 
 german

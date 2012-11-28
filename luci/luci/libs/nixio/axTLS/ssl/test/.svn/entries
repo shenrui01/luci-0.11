@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/libs/nixio/axTLS/ssl/test
 http://svn.luci.subsignal.org
 
@@ -502,17 +502,18 @@ Cyrus
 
 1308
 
-axTLS.withoutCA.p12
+test_axssl.sh
 file
 
 
 
 
 2012-11-26T22:39:11.000000Z
-cd3e642ee13114b68a6efb6eb2d7cc51
+e31bc947fad056e66596e029ad59f1f3
 2009-02-22T23:19:25.382122Z
 4268
 Cyrus
+has-props
 
 
 
@@ -533,8 +534,7 @@ Cyrus
 
 
 
-
-1573
+5575
 
 axTLS.x509_aes128.pem
 file
@@ -570,18 +570,17 @@ Cyrus
 
 607
 
-test_axssl.sh
+axTLS.withoutCA.p12
 file
 
 
 
 
 2012-11-26T22:39:11.000000Z
-e31bc947fad056e66596e029ad59f1f3
+cd3e642ee13114b68a6efb6eb2d7cc51
 2009-02-22T23:19:25.382122Z
 4268
 Cyrus
-has-props
 
 
 
@@ -602,7 +601,8 @@ has-props
 
 
 
-5575
+
+1573
 
 axTLS.key_4096
 file
@@ -672,14 +672,14 @@ Cyrus
 
 887
 
-axTLS.x509_512.pem
+axTLS.x509_bad_after.pem
 file
 
 
 
 
 2012-11-26T22:39:11.000000Z
-17baf3f4d2c1cb5240e200f4f54886e8
+975a2f5a5163bef7e8b34388e9629f93
 2009-02-22T23:19:25.382122Z
 4268
 Cyrus
@@ -706,14 +706,14 @@ Cyrus
 
 607
 
-axTLS.x509_bad_after.pem
+axTLS.x509_512.pem
 file
 
 
 
 
 2012-11-26T22:39:11.000000Z
-975a2f5a5163bef7e8b34388e9629f93
+17baf3f4d2c1cb5240e200f4f54886e8
 2009-02-22T23:19:25.382122Z
 4268
 Cyrus
@@ -774,40 +774,6 @@ has-props
 
 1159
 
-axTLS.key_1024.pem
-file
-
-
-
-
-2012-11-26T22:39:11.000000Z
-bbaa92e966856ded245ddd024be0a906
-2009-02-22T23:19:25.382122Z
-4268
-Cyrus
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-887
-
 killopenssl.sh
 file
 
@@ -842,14 +808,14 @@ has-props
 
 73
 
-axTLS.key_512
+axTLS.key_1024.pem
 file
 
 
 
 
 2012-11-26T22:39:11.000000Z
-c27ed0c20a352f52a7891c72a56777c6
+bbaa92e966856ded245ddd024be0a906
 2009-02-22T23:19:25.382122Z
 4268
 Cyrus
@@ -874,41 +840,7 @@ Cyrus
 
 
 
-321
-
-equifax.x509_ca
-file
-
-
-
-
-2012-11-26T22:39:11.000000Z
-649cef2e44fcc68f5207d051738fcb3d
-2009-02-22T23:19:25.382122Z
-4268
-Cyrus
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-646
+887
 
 perf_bigint.c
 file
@@ -944,14 +876,14 @@ Cyrus
 
 7615
 
-axTLS.withCA.p12
+equifax.x509_ca
 file
 
 
 
 
 2012-11-26T22:39:11.000000Z
-2acee18cfce3d6a309e0d40803a035ad
+649cef2e44fcc68f5207d051738fcb3d
 2009-02-22T23:19:25.382122Z
 4268
 Cyrus
@@ -976,7 +908,41 @@ Cyrus
 
 
 
-2089
+646
+
+axTLS.key_512
+file
+
+
+
+
+2012-11-26T22:39:11.000000Z
+c27ed0c20a352f52a7891c72a56777c6
+2009-02-22T23:19:25.382122Z
+4268
+Cyrus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+321
 
 axTLS.ca_x509.cer
 file
@@ -1011,6 +977,40 @@ Cyrus
 
 
 483
+
+axTLS.withCA.p12
+file
+
+
+
+
+2012-11-26T22:39:11.000000Z
+2acee18cfce3d6a309e0d40803a035ad
+2009-02-22T23:19:25.382122Z
+4268
+Cyrus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2089
 
 microsoft.x509_ca
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/libs/web/luasrc/view/cbi
 http://svn.luci.subsignal.org
 
@@ -570,40 +570,6 @@ has-props
 
 573
 
-tabmenu.htm
-file
-
-
-
-
-2012-11-26T22:39:19.000000Z
-dfa9a187c2305fab971226fb88053fa5
-2011-05-04T12:56:06.206448Z
-7021
-jow
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-949
-
 valuefooter.htm
 file
 
@@ -637,6 +603,40 @@ has-props
 
 
 55
+
+tabmenu.htm
+file
+
+
+
+
+2012-11-26T22:39:19.000000Z
+dfa9a187c2305fab971226fb88053fa5
+2011-05-04T12:56:06.206448Z
+7021
+jow
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+949
 
 firewall_zonelist.htm
 file
@@ -706,18 +706,17 @@ has-props
 
 2446
 
-tblsection.htm
+delegator.htm
 file
 
 
 
 
 2012-11-26T22:39:19.000000Z
-f7c48f711777aedb71b84ab45aa2aa17
-2012-02-15T22:08:51.741892Z
-8258
+360d6df09f064886bbbc74b8b86d0f1c
+2011-05-04T12:56:06.206448Z
+7021
 jow
-has-props
 
 
 
@@ -738,7 +737,8 @@ has-props
 
 
 
-5893
+
+1095
 
 apply_xhr.htm
 file
@@ -774,17 +774,18 @@ has-props
 
 1382
 
-delegator.htm
+tblsection.htm
 file
 
 
 
 
 2012-11-26T22:39:19.000000Z
-360d6df09f064886bbbc74b8b86d0f1c
-2011-05-04T12:56:06.206448Z
-7021
+f7c48f711777aedb71b84ab45aa2aa17
+2012-02-15T22:08:51.741892Z
+8258
 jow
+has-props
 
 
 
@@ -805,8 +806,7 @@ jow
 
 
 
-
-1095
+5893
 
 full_valueheader.htm
 file
@@ -842,40 +842,6 @@ has-props
 
 605
 
-network_netinfo.htm
-file
-
-
-
-
-2012-11-26T22:39:19.000000Z
-221613ba342e8470e46b296ad5444743
-2012-02-15T16:43:39.646864Z
-8244
-jow
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-775
-
 button.htm
 file
 
@@ -909,6 +875,40 @@ has-props
 
 
 297
+
+network_netinfo.htm
+file
+
+
+
+
+2012-11-26T22:39:19.000000Z
+221613ba342e8470e46b296ad5444743
+2012-02-15T16:43:39.646864Z
+8244
+jow
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+775
 
 network_ifacelist.htm
 file

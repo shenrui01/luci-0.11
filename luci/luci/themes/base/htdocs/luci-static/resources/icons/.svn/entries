@@ -1,7 +1,7 @@
 10
 
 dir
-9510
+9511
 http://svn.luci.subsignal.org/luci/branches/luci-0.11/themes/base/htdocs/luci-static/resources/icons
 http://svn.luci.subsignal.org
 
@@ -25,40 +25,6 @@ jow
 
 
 ab181a69-ba2e-0410-a84d-ff88ab4c47bc
-
-bridge.png
-file
-
-
-
-
-2012-11-26T22:39:03.000000Z
-8f12700c537063452c489b9ebf1b4a50
-2010-11-18T03:40:13.762502Z
-6491
-jow
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-838
 
 tunnel_disabled.png
 file
@@ -94,16 +60,16 @@ has-props
 
 546
 
-signal-0-25.png
+bridge.png
 file
 
 
 
 
 2012-11-26T22:39:03.000000Z
-4ecb1689321c996bb7b43a0b5bc0fe1c
-2009-09-28T16:53:30.091412Z
-5354
+8f12700c537063452c489b9ebf1b4a50
+2010-11-18T03:40:13.762502Z
+6491
 jow
 has-props
 
@@ -126,7 +92,41 @@ has-props
 
 
 
-495
+838
+
+wifi.png
+file
+
+
+
+
+2012-11-26T22:39:03.000000Z
+1b0f2665d30064e0e37fd50aa0ad6a05
+2010-11-18T03:40:13.762502Z
+6491
+jow
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1037
 
 loading.gif
 file
@@ -162,16 +162,16 @@ has-props
 
 1787
 
-wifi.png
+signal-0-25.png
 file
 
 
 
 
 2012-11-26T22:39:03.000000Z
-1b0f2665d30064e0e37fd50aa0ad6a05
-2010-11-18T03:40:13.762502Z
-6491
+4ecb1689321c996bb7b43a0b5bc0fe1c
+2009-09-28T16:53:30.091412Z
+5354
 jow
 has-props
 
@@ -194,7 +194,7 @@ has-props
 
 
 
-1037
+495
 
 vlan.png
 file
@@ -298,40 +298,6 @@ has-props
 
 485
 
-ethernet_disabled.png
-file
-
-
-
-
-2012-11-26T22:39:03.000000Z
-abeba69bcdf4bc77de777918c463fae8
-2010-11-18T03:40:13.762502Z
-6491
-jow
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-508
-
 tunnel.png
 file
 
@@ -365,6 +331,40 @@ has-props
 
 
 533
+
+ethernet_disabled.png
+file
+
+
+
+
+2012-11-26T22:39:03.000000Z
+abeba69bcdf4bc77de777918c463fae8
+2010-11-18T03:40:13.762502Z
+6491
+jow
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+508
 
 wifi_big_disabled.png
 file
@@ -400,40 +400,6 @@ has-props
 
 2853
 
-signal-none.png
-file
-
-
-
-
-2012-11-26T22:39:03.000000Z
-7e8019e8fe37e66c2aff11988327880c
-2009-09-28T16:53:30.091412Z
-5354
-jow
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-681
-
 signal-0.png
 file
 
@@ -467,6 +433,40 @@ has-props
 
 
 478
+
+signal-none.png
+file
+
+
+
+
+2012-11-26T22:39:03.000000Z
+7e8019e8fe37e66c2aff11988327880c
+2009-09-28T16:53:30.091412Z
+5354
+jow
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+681
 
 port_down.png
 file
