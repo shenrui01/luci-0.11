@@ -1,12 +1,11 @@
 #!/bin/sh /etc/rc.common
-# RA MOD
 
 START=99
 
 aria2_config() {
 
 	config_get enable $1 enable 0
-	config_get path $1 path /dev/null
+	config_get path $1 path
 	config_get download_folder $1 download_folder Downloads
 	config_get download_limit $1 download_limit 0
 	config_get upload_limit $1 upload_limit 0
@@ -21,7 +20,8 @@ aria2_config() {
 
 	local misc
 
-	[ "$enable" = "0" ] && stop && return 0
+	[ "$enable" -eq 0 ] && stop && exit 0
+	[ -z "$path" -o "$path" = "/dev/null" ] && exit 1	
 
 	aria2_conf_path="$path/.aria2"
 
@@ -37,7 +37,7 @@ continue
 file-allocation=trunc
 peer-id-prefix=-TR2610-
 user-agent=Transmission/2.61 (13407)
-enable-mmap
+#enable-mmap
 event-poll=epoll
 on-download-complete=/etc/aria2/post
 

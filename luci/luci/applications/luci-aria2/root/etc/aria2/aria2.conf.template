@@ -4,7 +4,7 @@ continue
 file-allocation=trunc
 peer-id-prefix=-TR2610-
 user-agent=Transmission/2.61 (13407)
-enable-mmap
+#enable-mmap
 event-poll=epoll
 on-download-complete=/etc/aria2/post
 

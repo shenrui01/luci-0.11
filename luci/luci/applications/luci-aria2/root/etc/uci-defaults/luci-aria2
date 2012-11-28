@@ -7,9 +7,5 @@ uci -q batch <<-EOF >/dev/null
 	commit ucitrack
 EOF
 chmod 755 /etc/init.d/aria2
-/etc/init.d/aria2 enabled && {
-	/etc/init.d/aria2 stop
-	/etc/init.d/aria2 disable
-}
 rm -f /tmp/luci-indexcache
 exit 0
