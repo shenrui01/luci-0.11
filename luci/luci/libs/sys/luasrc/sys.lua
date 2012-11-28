@@ -1011,3 +1011,48 @@ function swapfree()
 
 	return data
 end
+
+function iproute()
+	local data = {}
+	local k = {"ipmas","dev1", "dev2", "proto", "kernel", "scope", "link", "src", "ipadd"}
+	local ps = luci.util.execi("ip route")
+
+	if not ps then
+		return
+	else
+		ps()
+	end
+
+	for line in ps do
+		local row = {}
+
+		local j = 1
+		for value in line:gmatch("[^%s]+") do
+			row[k[j]] = value
+			j = j + 1
+		end
+
+		if row[k[1]] then
+
+			-- this is a rather ugly workaround to cope with wrapped lines in
+			-- the df output:
+			--
+			--	/dev/scsi/host0/bus0/target0/lun0/part3
+			--                   114382024  93566472  15005244  86% /mnt/usb
+			--
+
+			if not row[k[1]] then
+				j = 1
+				line = ps()
+				for value in line:gmatch("[^%s]+") do
+					row[k[j]] = value
+					j = j + 1
+				end
+			end
+
+			table.insert(data, row)
+		end
+	end
+
+	return data
+end
