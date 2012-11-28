@@ -17,11 +17,11 @@ module("luci.controller.aria2",package.seeall)
 function index()
 	require("luci.i18n")
 	luci.i18n.loadc("aria2")
-	if not nixio.fs.access("/etc/config/aria2") then
+	if not nixio.fs.access("/etc/config/Aria2_Config") then
 		return
 	end
 	
-	local page = entry({"admin","diskapply","aria2"},cbi("aria2"),_("Aria2 Downloader"))
+	local page = entry({"admin","services","aria2"},cbi("aria2"),_("Aria2 Downloader"))
 	page.i18n="aria2"
 	page.dependent=true
 end
