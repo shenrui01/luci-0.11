@@ -14,17 +14,14 @@ msgstr ""
 "Language-Team: \n"
 
 msgid "Aria2 Downloader"
-msgstr "Aria2 配置中心"
+msgstr "Aria2 下载器"
 
 msgid "Open Web Interface"
 msgstr "打开Web控制界面"
 
-msgid "Clich here to get detail help"
-msgstr "获取本地帮助"
-
 msgid ""
 "Use this page, you can download files from HTTP FTP and BitTorrent via Aria2."
-msgstr "在该页面，你可以利用Aria2来从HTTP、FTP以及BitTorrent获取文件"
+msgstr "在该页面，你可以利用Aria2下载器来从HTTP、FTP以及BitTorrent获取文件"
 
 msgid "Global"
 msgstr "全局"
@@ -33,49 +30,13 @@ msgid "Enabled"
 msgstr "启用"
 
 msgid "Run daemon as user"
-msgstr "以此身份运行"
-
-msgid "Log Enabled"
-msgstr "启用日志"
-
-msgid "Enable log"
-msgstr "开启日志记录"
-
-msgid "Continue"
-msgstr "继续未完成下载"
-
-msgid "Continue downloading a partially downloaded file."
-msgstr "继续下载上次中断的任务"
-
-msgid "Check Integrity"
-msgstr "文件校验"
-
-msgid "Run as"
-msgstr "以该身份运行"
-
-msgid "Check file integrity by validating piece hashes or a hash of entire file"
-msgstr "通过Hash检查文件完整性"
-
-msgid "File  Allocation"
-msgstr "文件预分配"
-
-msgid "none: doesn't pre-allocate file space. prealloc:pre-allocates file space before download begins.This may take some time depending on the size ofthe file.If you are using newer file systems such as ext4(with extents support), btrfs, xfs or NTFS(MinGW build only), falloc is your bestchoice. It allocates large(few GiB) filesalmost instantly. Don't use falloc with legacyfile systems such as ext3 and FAT32 because ittakes almost same time as prealloc and itblocks aria2 entirely until allocation finishes.falloc may not be available if your system doesn't have posix_fallocate() function.trunc : uses ftruncate() system call or platform-specific counterpart to truncate a file to a specified length."
-msgstr "none: doesn't pre-allocate file space. prealloc:pre-allocates file space before download begins.This may take some time depending on the size ofthe file.If you are using newer file systems such as ext4(with extents support), btrfs, xfs or NTFS(MinGW build only), falloc is your bestchoice. It allocates large(few GiB) filesalmost instantly. Don't use falloc with legacyfile systems such as ext3 and FAT32 because ittakes almost same time as prealloc and itblocks aria2 entirely until allocation finishes.falloc may not be available if your system doesn't have posix_fallocate() function.trunc : uses ftruncate() system call or platform-specific counterpart to truncate a file to a specified length."
-
-msgid "Min split size"
-msgstr "分割文件阈值"
-
-msgid "MB The min size to split the file to pieces to download "
-msgstr "单位：MB 当大于指定值时使用分块下载"
-
-msgid "Load Cookies from FILE using the Firefox3 format and Mozilla/Firefox(1.x/2.x)/Netscape format.(Aria2Cookies.cookies)"
-msgstr "加载Cookies"
+msgstr "以此用户身份运行"
 
 msgid "Location"
 msgstr "位置"
 
 msgid "Config Directory"
-msgstr "配置目录"
+msgstr "程序设置目录"
 
 msgid "Download Directory"
 msgstr "下载目录"
@@ -84,7 +45,7 @@ msgid "Task"
 msgstr "任务"
 
 msgid "Restore unfinished task when boot"
-msgstr "启动时继续未完成的任务"
+msgstr "启动时自动继续未完成的任务"
 
 msgid "Save interval"
 msgstr "保存进度间隔"
@@ -150,4 +111,4 @@ msgid "Command-Lines"
 msgstr "命令行"
 
 msgid "To check all commands availabled, visit:"
-msgstr "获取最新帮助:"
+msgstr "要察看所有可用命令，请访问:"

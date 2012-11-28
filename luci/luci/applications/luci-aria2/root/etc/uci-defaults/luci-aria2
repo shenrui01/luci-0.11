@@ -3,13 +3,13 @@
 uci -q batch <<-EOF >/dev/null
 	delete ucitrack.@aria2[-1]
 	set ucitrack.aria2="aria2"
-	set ucitrack.aria2.init='Aria2_Config'
+	set ucitrack.aria2.init='aria2'
 	commit ucitrack
 EOF
-chmod 755 /etc/init.d/Aria2_Init
-/etc/init.d/Aria2_Init enabled && {
-	/etc/init.d/Aria2_Init stop
-	/etc/init.d/Aria2_Init disable
+chmod 755 /etc/init.d/aria2
+/etc/init.d/aria2 enabled && {
+	/etc/init.d/aria2 stop
+	/etc/init.d/aria2 disable
 }
 rm -f /tmp/luci-indexcache
 exit 0
