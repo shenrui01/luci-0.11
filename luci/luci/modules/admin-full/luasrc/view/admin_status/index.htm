@@ -515,7 +515,7 @@ $Id: index.htm 9069 2012-08-17 15:06:46Z jow $
 		<tr><td width="33%"><%:Cpu Clock%></td><td><%=pcdata(cpuclock or "?")%>MHz</td></tr>
 		<tr><td width="33%"><%:Flash Size%></td><td><%=pcdata(flashsize /1024 or "?")%>M</td></tr>
 		<tr><td width="33%"><%:Firmware Version%></td><td>
-			<%=pcdata(luci.version.distname)%> <%=pcdata(luci.version.distversion)%>【<%=pcdata(luci.version.luciname)%> <%=pcdata(luci.version.luciversion)%>】
+			<%=pcdata(luci.version.distname)%> <%=pcdata(luci.version.distversion)%>【<%:LuCI%> <%=pcdata(luci.version.luciversion)%>】
 		</td></tr>
 		<tr><td width="33%"><%:Kernel Version%></td><td><%=luci.sys.exec("uname -r")%></td></tr>
 		<tr><td width="33%"><%:Local Time%></td><td id="localtime">-</td></tr>
