@@ -284,6 +284,14 @@ textarea#syslog {
 	font-family: monospace;
 }
 
+textarea#diskinfo {
+	width: 98%;
+	min-height: 100px;
+	border: 3px solid #ccc;
+	padding: 5px;
+	font-family: monospace;
+}
+
 #maincontainer {
 	clear: both;
 	width: 96%;
