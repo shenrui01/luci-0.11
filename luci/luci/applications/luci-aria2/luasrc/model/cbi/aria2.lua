@@ -12,7 +12,9 @@ You may obtain a copy of the License at
 ]]--
 local fs = require "nixio.fs"
 
-m = Map("aria2", translate("aria2 Downloader"), translate("Make sure you have mounted USB Storage device"))
+local button="&nbsp;&nbsp;&nbsp;&nbsp;<input type=\"button\" value=\" " .. translate("Open Web Interface") .. " \" onclick=\"window.open('http://'+window.location.host+'/aria2')\"/>"
+
+m = Map("aria2", translate("aria2 Downloader"), translate("Make sure you have mounted USB Storage device") .. button)
 
 s = m:section(TypedSection, "aria2", translate("Settings"))
 s.anonymous = true

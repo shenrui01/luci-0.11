@@ -10,6 +10,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
+msgid "Open Web Interface"
+msgstr "打开Web控制界面"
+
 msgid "BT/PT Max Peers"
 msgstr "BT/PT任务最大连接数"
 
