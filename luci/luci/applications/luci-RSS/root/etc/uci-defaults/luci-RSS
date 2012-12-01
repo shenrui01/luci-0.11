@@ -6,6 +6,6 @@ uci -q batch <<-EOF >/dev/null
 	set ucitrack.RSS.init='RSS'
 	commit ucitrack
 EOF
-chmod 755 /etc/init.d/RSS
+
 rm -f /tmp/luci-indexcache
 exit 0
