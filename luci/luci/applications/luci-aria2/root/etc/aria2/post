@@ -1,9 +1,37 @@
 #!/bin/sh
+# aria2 post-process script
+
 urldecode(){
   echo -e "$(sed 's/+/ /g; s/%/\\x/g')"
 }
+
+getExtension(){
+	echo $(sed 's/.*\.//')
+}
+
+# fix URL encoded filename
 
 rawfile="$3"
 newfile="$(dirname "$rawfile")/$(basename "$rawfile" | urldecode)"
 
 [ "$rawfile" != "$newfile" ] && mv "$rawfile" "$newfile"
+
+# Download Subtitle
+
+[ -z `which fetchsub` ] && exit 1
+
+. $IPKG_INSTROOT/lib/functions.sh
+config_load aria2
+config_get autosub_enable aria2 autosub_enable 0
+
+if [ "$autosub_enable" -eq 0 ] && exit 0
+
+filetype=`echo "$newfile" | getExtension`
+
+config_get autosub_filetype aria2 autosub_filetype
+
+autosub_filetype=`echo "$autosub_filetype" | sed -e 's/[,]/|/g'`
+
+echo "$filetype" | grep -q -E -r -i "$autosub_filetype"
+
+[ $? -eq 0 ] && fetchsub "$newfile"

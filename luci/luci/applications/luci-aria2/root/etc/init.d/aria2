@@ -1,22 +1,24 @@
 #!/bin/sh /etc/rc.common
-
+# RA-MOD <ravageralpha AT gmail.com>
 START=99
-
 aria2_config() {
 
-	config_get enable $1 enable 0
-	config_get path $1 path
-	config_get download_folder $1 download_folder Downloads
-	config_get download_limit $1 download_limit 0
-	config_get upload_limit $1 upload_limit 0
-	config_get btmaxpeers $1 btmaxpeers 25
-	config_get maxjobs $1 maxjobs 5
-	config_get maxthread $1 maxthread 4
-	config_get tcp_port $1 tcp_port 51413
-	config_get udp_port $1 udp_port 51413
-	config_get seedtime $1 seedtime 525600
-	config_get rpc_user $1 rpc_user
-	config_get rpc_passwd $1 rpc_passwd
+	cfg="$1"
+	config_get enable "$cfg" enable 0
+	config_get path "$cfg" path
+	config_get download_folder "$cfg" download_folder Downloads
+	config_get enablemmap "$cfg" enablemmap 1
+	config_get fileallocation "$cfg" fileallocation 'trunc'
+	config_get download_limit "$cfg" download_limit 0
+	config_get upload_limit "$cfg" upload_limit 0
+	config_get btmaxpeers "$cfg" btmaxpeers 25
+	config_get maxjobs "$cfg" maxjobs 5
+	config_get maxthread "$cfg" maxthread 4
+	config_get tcp_port "$cfg" tcp_port 51413
+	config_get udp_port "$cfg" udp_port 51413
+	config_get seedtime "$cfg" seedtime 525600
+	config_get rpc_user "$cfg" rpc_user ""
+	config_get rpc_passwd "$cfg" rpc_passwd ""
 
 	local misc
 
@@ -24,20 +26,23 @@ aria2_config() {
 	[ -z "$path" -o "$path" = "/dev/null" ] && exit 1	
 
 	aria2_conf_path="$path/.aria2"
+	aria2_configfile="$aria2_conf_path/aria2.conf"
+	aria2_downloadlist="$aria2_conf_path/aria2file.txt"
+	aria2_DHT="$aria2_conf_path/dht.dat"
+	aria2_downloadfolder="$path/$download_folder"
 
 	[ ! -d "$aria2_conf_path" ] && mkdir -p "$aria2_conf_path"
-	[ ! -f "$aria2_conf_path/aria2file.txt" ] && touch "$aria2_conf_path/aria2file.txt"
-	[ ! -f "$aria2_conf_path/dht.dat" ] && touch "$aria2_conf_path/dht.dat"
+	[ ! -f "$aria2_downloadlist" ] && touch "$aria2_downloadlist"
+	[ ! -f "$aria2_DHT" ] && touch "$aria2_DHT"
+	[ "$enablemmap" -eq 1 ] && enablemmap="true" || enablemmap="false"
 
-	[ ! -s "$aria2_conf_path/aria2.conf" ] && {
-			cat > "$aria2_conf_path/aria2.conf" << EOF
+	[ -s "$aria2_configfile" ] || {
+			cat > "$aria2_configfile" << EOF
 # General Setting
 #
 continue
-file-allocation=trunc
 peer-id-prefix=-TR2610-
 user-agent=Transmission/2.61 (13407)
-#enable-mmap
 event-poll=epoll
 on-download-complete=/etc/aria2/post
 
@@ -45,7 +50,7 @@ on-download-complete=/etc/aria2/post
 #
 disable-ipv6
 check-certificate=false
-min-split-size=1M
+min-split-size=5M
 
 # BitTorrent Setting
 #
@@ -63,20 +68,20 @@ EOF
 	}
 
 	# Check if previous session not saved and torrents exist then load them to aria2
-	[ -s "$aria2_conf_path/aria2file.txt" ] || {
-		[ -d "$path/$download_folder" -a `ls $path/$download_folder/*.torrent | wc -l` -ge "1" ] && {
-			for i in $path/$download_folder/*.torrent
+	[ -s "$aria2_downloadlist" ] || {
+		[ -d "$aria2_downloadfolder" -a `ls $aria2_downloadfolder/*.torrent | wc -l` -ge "1" ] && {
+			for i in $aria2_downloadfolder/*.torrent
 			do
-				echo "$i" >> "$aria2_conf_path/aria2file.txt"
+				echo "$i" >> "$aria2_downloadlist"
 			done
 			misc="--pause"
 		}
 	}
 
 	aria2c -c -D --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all $misc \
-	--seed-time=$seedtime --conf-path="$aria2_conf_path/aria2.conf" --dir="$path/$download_folder" \
-	--input-file="$aria2_conf_path/aria2file.txt" --save-session="$aria2_conf_path/aria2file.txt" \
-	--dht-file-path="$aria2_conf_path/dht.dat" --rpc-user=$rpc_user --rpc-passwd=$rpc_passwd \
+	--seed-time=$seedtime --conf-path="$aria2_configfile" --dir="$aria2_downloadfolder" \
+	--input-file="$aria2_downloadlist" --save-session="$aria2_downloadlist" --enable-mmap="$enablemmap" \
+	--dht-file-path="$aria2_DHT" --file-allocation="$fileallocation" --rpc-user=$rpc_user --rpc-passwd=$rpc_passwd \
 	--max-overall-download-limit=$download_limit --max-overall-upload-limit=$upload_limit \
 	--bt-max-peers=$btmaxpeers --split=$maxthread --max-connection-per-server=$maxthread \
 	--max-concurrent-downloads=$maxjobs --listen-port=$tcp_port --dht-listen-port=$udp_port
@@ -94,4 +99,3 @@ stop() {
 	killall -2 aria2c
 	sleep 3	
 }
-

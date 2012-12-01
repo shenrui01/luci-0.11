@@ -1,10 +1,8 @@
 # General Setting
 #
 continue
-file-allocation=trunc
 peer-id-prefix=-TR2610-
 user-agent=Transmission/2.61 (13407)
-#enable-mmap
 event-poll=epoll
 on-download-complete=/etc/aria2/post
 
@@ -12,7 +10,7 @@ on-download-complete=/etc/aria2/post
 #
 disable-ipv6
 check-certificate=false
-min-split-size=1M
+min-split-size=5M
 
 # BitTorrent Setting
 #
