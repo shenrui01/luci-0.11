@@ -2908,3 +2908,6 @@ msgstr "CPU型号"
 
 msgid "Flash Size"
 msgstr "闪存容量"
+
+msgid "Enable WPS"
+msgstr "启用WPS"
