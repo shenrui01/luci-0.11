@@ -43,7 +43,8 @@ maxjobs.default = "5"
 maxjobs.placeholder = "5"
 maxjobs.datatype = "uinteger"
 
-file_allocation = s:taboption("basic", ListValue, "fileallocation", translate("File Allocation Method"), translate("<br />trunc - Recommand for mostly filesystem<br />falloc - fastest,EXT4 only"))
+file_allocation = s:taboption("basic", ListValue, "fileallocation", translate("File Allocation Method"), translate("<br />none - Disable file allocation<br />trunc - Recommand for mostly filesystem<br />falloc - fastest,EXT4 only"))
+file_allocation:value("none")
 file_allocation:value("trunc")
 file_allocation:value("falloc")
 
