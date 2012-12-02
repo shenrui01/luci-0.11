@@ -88,7 +88,7 @@ EOF
 }
 
 start() {
-	[ -n `mount | grep /dev/sda | cut -d " " -f3` ] && {
+	[ -n `mount | grep /dev/sda | cut -d " " -f3|awk '{printf"%s",$0}'` ] && {
 		config_load aria2
 		config_foreach aria2_config aria2
 	}
