@@ -5,12 +5,11 @@ RA-MOD <ravageralpha AT gmail.com>
 local fs = require "nixio.fs"
 
 local running=(luci.sys.call("pidof aria2c > /dev/null") == 0)
-local button=""
+local button="&nbsp;&nbsp;&nbsp;&nbsp;<input type=\"button\" value=\" " .. translate("Open Web Interface") .. " \" onclick=\"window.open('http://'+window.location.host+'/aria2')\"/>"
 if running then
-	button="&nbsp;&nbsp;&nbsp;&nbsp;<input type=\"button\" value=\" " .. translate("Open Web Interface") .. " \" onclick=\"window.open('http://'+window.location.host+'/aria2')\"/>"
 	m = Map("aria2", translate("aria2 Downloader"), translate("aria2 is running") .. button)
 else
-	m = Map("aria2", translate("aria2 Downloader"), translate("aria2 is not running,make sure you have mounted USB Storage device"))
+	m = Map("aria2", translate("aria2 Downloader"), translate("aria2 is not running,make sure you have mounted USB Storage device") .. button)
 end
 
 s = m:section(TypedSection, "aria2", translate("Settings"))
