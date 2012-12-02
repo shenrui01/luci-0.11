@@ -41,7 +41,7 @@ $Id: index.htm 9069 2012-08-17 15:06:46Z jow $
 
 		local rv = {
 			uptime     = luci.sys.uptime(),
-			localtime  = os.date(),
+			localtime  = os.date("%Y-%m-%d %A %X"),
 			loadavg    = { luci.sys.loadavg() },
 			memtotal   = memtotal,
 			memcached  = memcached,
