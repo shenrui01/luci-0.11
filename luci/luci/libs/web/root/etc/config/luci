@@ -1,6 +1,7 @@
 config core main
 	option lang zh_cn
 	option resourcebase /luci-static/resources
+	option mediaurlbase '/luci-static/openwrt.org'
 	
 config extern flash_keep
 	option uci 		"/etc/config/"
