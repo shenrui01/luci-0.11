@@ -1,6 +1,8 @@
 module("luci.controller.multiwan", package.seeall)
 
 function index()
+	require("luci.i18n")
+	luci.i18n.loadc("multiwan")
 	local fs = luci.fs or nixio.fs
 	if not fs.access("/etc/config/multiwan") then
 		return
@@ -19,6 +21,8 @@ function index()
 	page.dependent = true
 end
 function multiwan_status()
+	require("luci.i18n")
+	luci.i18n.loadc("multiwan")
 	local nfs = require "nixio.fs"
 	local cachefile = "/tmp/.mwan/cache"
 

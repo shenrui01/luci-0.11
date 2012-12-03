@@ -95,3 +95,6 @@ msgstr "WAN上行链路"
 
 msgid "all"
 msgstr "全部"
+
+msgid "Multi-WAN Status"
+msgstr "Multi-WAN 状态"

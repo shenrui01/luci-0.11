@@ -2808,7 +2808,7 @@ msgstr ""
 msgid "Mounted Swap file systems"
 msgstr "已挂载的SWAP文件系统"
 
-msgid "fdisk Information"
+msgid "disk Information"
 msgstr "磁盘分区信息"
 
 msgid "Disk Information Desc"
