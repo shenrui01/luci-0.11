@@ -6,7 +6,7 @@
 [ -n `which base64` ] && BASE64='base64'
 [ -z "$BASE64" ] && echo "No base64/Openssl tools detected,please install first" && exit 1
 
-JSONPATH="http://192.168.1.1:6800/jsonrpc"
+JSONPATH="http://127.0.0.1:6800/jsonrpc"
 
 usage() {
 	echo "Usage:

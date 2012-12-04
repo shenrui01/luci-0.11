@@ -11,7 +11,7 @@ aria2_config() {
 
 	config_get device "$cfg" device
 
-	[ -z "$device" ] && exit 1
+	[ ! -d "$device" ] && exit 1
 
 	config_get download_folder "$cfg" download_folder Downloads
 	config_get diskcache "$cfg" diskcache '1M'
