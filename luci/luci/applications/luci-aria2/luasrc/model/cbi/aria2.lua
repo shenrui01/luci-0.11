@@ -1,5 +1,5 @@
 --[[
-RA-MOD <ravageralpha AT gmail.com>
+RA-MOD
 ]]--
 
 local fs = require "nixio.fs"
@@ -17,21 +17,12 @@ s.anonymous = true
 
 s:tab("basic",  translate("Basic Settings"))
 
-mounted = luci.sys.exec("mount | grep /dev/sda | cut -d \" \" -f3")
-
 switch = s:taboption("basic", Flag, "enable", translate("Enable"))
 switch.rmempty = false
 
-dev = s:taboption("basic", ListValue, "path", translate("Device"))
-dev.rmempty = false
-
-if mounted ~="" then
-	for line in mounted:gmatch("[^\r\n]+") do
-		dev:value(line)
-	end
-else
-	dev:value("/dev/null")
-end
+device = s:taboption("basic", Value, "device", translate("Device"))
+device.default = "/mnt/sda1"
+device.placeholder = "/mnt/sda1"
 
 download_folder = s:taboption("basic", Value, "download_folder", translate("Download Folder"), translate("Where Your Files Save"))
 download_folder.default = "Downloads"
@@ -47,33 +38,29 @@ file_allocation:value("none")
 file_allocation:value("trunc")
 file_allocation:value("falloc")
 
-diskcache = s:taboption("basic", Flag, "enablemmap", translate("Enable Disk Cache"), translate("Filesize below 4G only"))
-diskcache.rmempty = false
-diskcache.default = 1
+diskcache = s:taboption("basic", ListValue, "diskcache", translate("Enable Disk Cache"))
+diskcache:value("1M")
+diskcache:value("2M")
+diskcache:value("4M")
+diskcache:value("8M")
 
-if mounted ~= "" then
-	s:tab("editconf", translate("Edit Configuration"))
-	editconf = s:taboption("editconf", Value, "conf", 
-		translate("You can customize aria2 configuration here"), 
-		translate("Comment Using #"))
-	editconf.template = "cbi/tvalue"
-	editconf.rows = 20
-	editconf.wrap = "off"
-	aria2_confpath = luci.model.uci.cursor():get_first("aria2","aria2","path") .. "/.aria2"
-	aria2_config = aria2_confpath .. "/aria2.conf"
-	function editconf.cfgvalue(self, section)
-		return fs.readfile(aria2_config) or fs.readfile("/etc/aria2/aria2.conf.template")
-	end
-	function editconf.write(self, section, value)
-		local onoff = self.map:get(section, "enable")
-		if onoff == "1" then
-			if fs.access(aria2_confpath) == false then
-				fs.mkdirr(aria2_confpath)
-			end
-			fs.writefile(aria2_config, value:gsub("\r\n?", "\n"))
-		end
+s:tab("editconf", translate("Edit Configuration"))
+editconf = s:taboption("editconf", Value, "conf", 
+	translate("You can customize aria2 configuration here"), 
+	translate("Comment Using #"))
+editconf.template = "cbi/tvalue"
+editconf.rows = 20
+editconf.wrap = "off"
+
+function editconf.cfgvalue(self, section)
+	return fs.readfile("/etc/aria2/aria2.conf") or ""
+end
+function editconf.write(self, section, value)
+	if value then
+		fs.writefile("/etc/aria2/aria2.conf", value:gsub("\r\n?", "\n"))
 	end
 end
+
 -- Network
 network=m:section(TypedSection, "aria2", translate("Network"))
 network.anonymous = true
@@ -137,4 +124,3 @@ autosub_filetype.default = "avi,mkv"
 autosub_filetype:depends("autosub_enable", 1)
 
 return m
-

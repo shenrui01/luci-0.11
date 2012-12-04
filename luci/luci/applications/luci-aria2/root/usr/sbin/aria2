@@ -1,5 +1,5 @@
 #!/bin/sh
-# RA-MOD <ravageralpha AT gmail.com>
+# Author : RA <ravageralpha@gmail.com>
 
 [ -z `which wget` ] && echo "No wget detected,please install first" && exit 1
 [ -n `which openssl` ] && BASE64='openssl base64'
