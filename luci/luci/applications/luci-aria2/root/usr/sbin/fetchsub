@@ -39,7 +39,7 @@ esac
 
 getFileSize(){
 	# Fix Me
-	[ -f "$1" ] && ls -nl "$1" | awk '{print $5}'
+	[ -f "$1" ] && ls -nl "$1" | awk '{print $5}' || echo 0
 }
 
 getFileHash(){
@@ -67,64 +67,42 @@ while [ -n "$1" ];do
 	}
 
 	filesize=$(getFileSize "$file")
-
 	[ $filesize -le 8192 ] && ERROR "Serious?"
-
 	filepath="E:\\$(dirname "$file" | sed 's/\//\\\\/g')" # it's just work
 	filename="$(echo "$(dirname "$file")/$(basename "$file")" | sed 's/\.[^\.]*$//')"
 	moviename="$(basename "$filename" | tr [A-Z] [a-z] | stripFileName | xargs)"
-
 	bin="${filename}.bin"
-
 	first=4096
 	second=$(($filesize/3*2))
 	third=$(($filesize/3))
 	fourth=$(($filesize-8192))
-
 	filehash="$(getFileHash $first);$(getFileHash $second);$(getFileHash $third);$(getFileHash $fourth)"
 
 	for i in $(seq 9)
 	do
 		SERVER="http://splayer$i.shooter.cn/api/subapi.php"
-
-		echo -n "Sending request to $SERVER..."
-		
+		echo -n "Sending request to $SERVER..."		
 		#send request
 		curl -s --connect-timeout $TIMEOUT -A "$USERAGENT" \
 		-F "pathinfo=$filepath" -F "filehash=$filehash" -F "shortname=$moviename" -F "lang=$LANGUAGE" \
 		-o "$bin" "$SERVER"
 
-		# sometimes shooter.cn give zero fuck about your request , so try other
-		# suck code
-		case $? in
-			0)
-				if [ $(getFileSize "$bin") -gt 1024 ]; then
-					echo -n -e "OK,Extracting\n"
-					FLAG="DONE"
-				else
-					[ -f "$bin" ] && rm "$bin"
-					echo -n -e "Bad response\n" >&2
-					FLAG="FAIL"
-					sleep 2
-					continue
-				fi
-				;;
-			*)
-				echo -n -e "Fail\n" >&2
-				FLAG="FAIL"
-				sleep 2
-				continue
-				;;
-		esac
-
+		if [ $? -eq 0 -a $(getFileSize "$bin") -gt 1024 ]; then
+			echo -n -e "OK,Extracting\n"
+			FLAG="DONE"
+		else
+			[ -f "$bin" ] && rm "$bin"
+			echo -n -e "Fail\n" >&2
+			FLAG="FAIL"
+			sleep 2
+			continue
+		fi
 		# get the subtitle filetype
 		extname=`dd if="$bin" bs=1 count=7 skip=18 2> /dev/null | sed 's/^.*\(...\)/\1/'`
 		sub="$filename.$extname"
-
 		# get the subtitle
 		dd if="$bin" of="$sub" bs=1 skip=29 2> /dev/null
 		rm "$bin"
-
 		# maybe not handle well , fix me
 		gzip=`dd if="$sub" bs=1 count=2 2> /dev/null | hexdump -x | awk '{print $2}'`
 		[ "$gzip" = '1f8b' ] && {

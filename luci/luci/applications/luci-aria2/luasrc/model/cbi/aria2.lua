@@ -57,7 +57,12 @@ function editconf.cfgvalue(self, section)
 end
 function editconf.write(self, section, value)
 	if value then
-		fs.writefile("/etc/aria2/aria2.conf", value:gsub("\r\n?", "\n"))
+		value = value:gsub("\r\n?", "\n")
+		fs.writefile("/tmp/aria2.conf", value)
+		if (luci.sys.call("cmp -s /tmp/aria2.conf /etc/aria2/aria2.conf") == 1) then
+			fs.writefile("/etc/aria2/aria2.conf", value)
+		end
+		fs.remove("/tmp/aria2.conf")
 	end
 end
 
