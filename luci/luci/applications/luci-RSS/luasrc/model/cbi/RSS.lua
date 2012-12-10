@@ -60,7 +60,12 @@ end
 
 function feeds.write(self, section, value)
 	if value then
-		fs.writefile("/etc/RSS/feeds", value:gsub("\r\n", "\n"))
+		value = value:gsub("\r\n?", "\n")
+		fs.writefile("/tmp/feeds", value)
+		if (luci.sys.call("cmp -s /tmp/feeds /etc/RSS/feeds") == 1) then
+			fs.writefile("/etc/RSS/feeds", value)
+		end
+		fs.remove("/tmp/feeds")
 	end
 end
 

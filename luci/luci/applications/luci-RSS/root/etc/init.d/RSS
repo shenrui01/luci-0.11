@@ -4,6 +4,12 @@
 START=99
 crontabs_root="/etc/crontabs/root"
 
+aria2_config(){
+	local cfg="$1"
+	config_get rpc_user "$cfg" rpc_user ""
+	config_get rpc_passwd "$cfg" rpc_passwd ""
+}
+
 RSS_config(){
 	
 	local cfg="$1"
@@ -19,10 +25,14 @@ RSS_config(){
 	[ "$enable" = '0' ] && stop && exit 0
 	[ ! -d "$folder" ] && echo "ERROR:Not a Folder" >&2 && exit 1
 
-	if [ "$aria2" = '0' ]; then
+	if [ "$aria2" -eq 0 ]; then
 		RSS="$(which leech) -m $maxtask -d "\"$folder\"" -k "\"$keywords\"""
 	else
-		RSS="$(which leech) -a -m $maxtask -d "\"$folder\"" -k "\"$keywords\"""
+		aria2_rpc_path="http://127.0.0.1:6800/jsonrpc"
+		config_load aria2
+		config_foreach aria2_config aria2
+		[ -n "$rpc_user" -o -n "$rpc_passwd" ] && aria2_rpc_path="http://$rpc_user:$rpc_passwd@127.0.0.1:6800/jsonrpc"
+		RSS="$(which leech) -a -p "$aria2_rpc_path" -m $maxtask -d "\"$folder\"" -k "\"$keywords\"""
 	fi
 
 	if [ "$interval" != '0' ]; then
