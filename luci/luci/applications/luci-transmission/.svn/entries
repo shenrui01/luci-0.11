@@ -1,19 +1,15 @@
 10
 
 dir
-9511
-http://svn.luci.subsignal.org/luci/branches/luci-0.11/applications/luci-transmission
-http://svn.luci.subsignal.org
+556
+svn://svn.openwrt.org.cn/dreambox/luci/trunk/luci/luci/applications/luci-transmission
+svn://svn.openwrt.org.cn/dreambox
 
 
 
-2012-10-29T12:56:58.098628Z
-9404
-jow
-
-
-
-
+2012-02-08T08:29:17.237478Z
+379
+zjhzzyf
 
 
 
@@ -24,12 +20,19 @@ jow
 
 
 
-ab181a69-ba2e-0410-a84d-ff88ab4c47bc
+
+
+
+
+74e81aba-36f0-4891-8cfb-1815f9025a0c
 
 root
 dir
 
 luasrc
+dir
+
+ipkg
 dir
 
 Makefile
@@ -38,11 +41,11 @@ file
 
 
 
-2012-11-26T22:39:07.000000Z
-c5b7c26698b892a09c38257fba9f90d3
-2012-04-15T20:26:10.004518Z
-8572
-soma
+2012-11-08T15:04:19.000000Z
+923bebaefc91cc11d1dfd811be44601f
+2011-11-23T01:51:08.968579Z
+314
+haliyoute
 
 
 
@@ -64,5 +67,5 @@ soma
 
 
 
-79
+76
 
