@@ -310,10 +310,10 @@ msgid "Background Scan"
 msgstr "后台搜索"
 
 msgid "Backup / Flash Firmware"
-msgstr "备份/升级"
+msgstr "备份|升级"
 
 msgid "Backup / Restore"
-msgstr "备份/恢复"
+msgstr "备份|恢复"
 
 msgid "Backup file list"
 msgstr "文件备份列表"
