@@ -27,8 +27,6 @@ aria2_config() {
 	config_get rpc_user "$cfg" rpc_user ""
 	config_get rpc_passwd "$cfg" rpc_passwd ""
 
-	local misc
-
 	aria2_conf_path="$device/.aria2"
 	aria2_downloadlist="$aria2_conf_path/aria2file.txt"
 	aria2_DHT="$aria2_conf_path/dht.dat"
@@ -72,6 +70,14 @@ seed-ratio=0.0
 EOF
 	}
 
+	cmd="aria2c -c -D --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all $misc \
+	--seed-time=$seedtime --conf-path=$aria2_configfile --dir=$aria2_downloadfolder \
+	--input-file=$aria2_downloadlist --save-session=$aria2_downloadlist --disk-cache=$diskcache \
+	--dht-file-path=$aria2_DHT --file-allocation=$fileallocation --rpc-user=$rpc_user --rpc-passwd=$rpc_passwd \
+	--max-overall-download-limit=$download_limit --max-overall-upload-limit=$upload_limit \
+	--bt-max-peers=$btmaxpeers --split=$maxthread --max-connection-per-server=$maxthread \
+	--max-concurrent-downloads=$maxjobs --listen-port=$tcp_port --dht-listen-port=$udp_port"
+
 	# Check if previous session not saved and torrents exist then load them to aria2
 	[ -s "$aria2_downloadlist" ] || {
 		[ -d "$aria2_downloadfolder" -a `ls $aria2_downloadfolder/*.torrent | wc -l` -ge 1 ] && {
@@ -79,17 +85,12 @@ EOF
 			do
 				echo "$i" >> "$aria2_downloadlist"
 			done
-			misc="--pause"
+			cmd="$cmd --pause=true"
 		}
 	}
 
-	aria2c -c -D --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all $misc \
-	--seed-time=$seedtime --conf-path="$aria2_configfile" --dir="$aria2_downloadfolder" \
-	--input-file="$aria2_downloadlist" --save-session="$aria2_downloadlist" --disk-cache="$diskcache" \
-	--dht-file-path="$aria2_DHT" --file-allocation="$fileallocation" --rpc-user=$rpc_user --rpc-passwd=$rpc_passwd \
-	--max-overall-download-limit=$download_limit --max-overall-upload-limit=$upload_limit \
-	--bt-max-peers=$btmaxpeers --split=$maxthread --max-connection-per-server=$maxthread \
-	--max-concurrent-downloads=$maxjobs --listen-port=$tcp_port --dht-listen-port=$udp_port
+	eval "$cmd"
+
 }
 
 start() {
