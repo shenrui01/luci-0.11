@@ -475,6 +475,9 @@ $(eval $(call application,guide,guide configuration module))
 
 $(eval $(call application,webshell,webshell configuration module))
 
+$(eval $(call application,mentohust,mentohust configuration module,\
+	 +PACKAGE_luci-app-mentohust:mentohust))
+
 
 ### Server Gateway Interfaces ###
 define sgi
