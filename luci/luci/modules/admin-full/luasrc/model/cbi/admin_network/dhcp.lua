@@ -64,6 +64,13 @@ rf.optional = true
 s:taboption("files", Flag, "nohosts",
 	translate("Ignore Hosts files")).optional = true
 
+orzhosts = s:taboption("files", Flag, "orzhosts", 
+	        translate("orzhosts"),translate("<a href='https://code.google.com/p/hostsx' target='_blank'>orzhosts code page</a>")) 
+	 
+	orzhostsup = s:taboption("files", Flag, "autouporzhosts", 
+	        translate("update orzhosts files"),     translate("update orzhosts files form internet,suggest on")) 
+	orzhostsup:depends("orzhosts", "1")
+
 hf = s:taboption("files", DynamicList, "addnhosts",
 	translate("Additional Hosts files"))
 

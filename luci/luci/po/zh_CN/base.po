@@ -2911,3 +2911,12 @@ msgstr "闪存容量"
 
 msgid "Enable WPS"
 msgstr "启用WPS"
+
+msgid "<a href='https://code.google.com/p/hostsx' target='_blank'>orzhosts code page</a>"
+msgstr "<a href='https://code.google.com/p/hostsx' target='_blank'>orzhosts代码页面</a>"
+
+msgid "update orzhosts files"
+msgstr "更新orzhosts"
+
+msgid "update orzhosts files form internet,suggest on"
+msgstr "在线更新orzhosts（推荐）"
