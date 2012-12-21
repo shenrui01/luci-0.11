@@ -28,6 +28,9 @@ msgstr "网络"
 msgid "Queueing"
 msgstr "队列"
 
+msgid "View The Log"
+msgstr "查看日志"
+
 msgid "Enabled"
 msgstr "启用"
 
@@ -40,10 +43,10 @@ msgstr "以该用户运行"
 msgid "Cache size in MB"
 msgstr "磁盘缓存（MB）"
 
-msgid "message_level"
+msgid "Message level"
 msgstr "日志等级"
 
-msgid "None"
+msgid "Close"
 msgstr "关闭"
 
 msgid "Error"
@@ -100,6 +103,18 @@ msgstr "临时下载目录"
 msgid "preallocation"
 msgstr "磁盘预分配"
 
+msgid "Full - slower but reduces disk fragmentation"
+msgstr "0=关闭，1=快速，2=完全,建议取1开启该功能，防止下载大半了才发现磁盘不够。取2时，可以减少磁盘碎片，但速度较慢"
+
+msgid "Fast"
+msgstr "快速"
+
+msgid "Full"
+msgstr "完全"
+
+msgid "Append &quot;.part&quot; to incomplete files' names"
+msgstr "在未完成的文件名后面加上 &quot;.part&quot;"
+
 msgid "Prefetch enabled"
 msgstr "启用预读取"
 
@@ -117,6 +132,12 @@ msgstr "启用种子目录监控"
 
 msgid "Watch directory"
 msgstr "种子目录"
+
+msgid "Trash original torrent files"
+msgstr "删除源种子文件"
+
+msgid "Delete torrents added from the watch directory."
+msgstr "从监控目录删除源种子"
 
 msgid "Speed limit down enabled"
 msgstr "启用常规下载限速"
@@ -136,6 +157,9 @@ msgstr "每个种子上传通道数"
 msgid "Alternative speed enabled"
 msgstr "启用临时限速"
 
+msgid "Override normal speed limits manually or at scheduled times"
+msgstr "覆盖常规限速或计划限速"
+
 msgid "Alternative download speed"
 msgstr "临时下载限速"
 
@@ -143,21 +167,49 @@ msgid "Alternative upload speed"
 msgstr "临时上传限速"
 
 msgid "Alternative speed timing enabled"
-msgstr "指定时间启用临时限速"
+msgstr "计划限速"
 
 msgid "Alternative speed time day"
 msgstr "重复"
 
-msgid "Number/bitfield. Start with 0, then for each day you want the scheduler enabled, add a value. For Sunday - 1, Monday - 2, Tuesday - 4, Wednesday - 8, Thursday - 16, Friday - 32, Saturday - 64"
-msgstr "0 - 每天 1 - 每个星期日 2 - 每个星期一 4 - 每个星期二<br />8 - 每个星期三 16 - 每个星期四 32 - 每个星期五 64 - 每个星期六"
+msgid "Every day"
+msgstr "每天"
+
+msgid "Working days"
+msgstr "工作日"
+
+msgid "Weekend"
+msgstr "周末"
+
+msgid "Sunday"
+msgstr "星期日"
+
+msgid "Monday"
+msgstr "星期一"
+
+msgid "Tuesday"
+msgstr "星期二"
+
+msgid "Wednesday"
+msgstr "星期三"
+
+msgid "Thursday"
+msgstr "星期四"
+
+msgid "Friday"
+msgstr "星期五"
+
+msgid "Saturday"
+msgstr "星期六"
+
 
 msgid "Alternative speed time begin"
 msgstr "起始时间"
 
-msgid "in minutes from midnight"
-msgstr "从00:00开始以分为单位"
+msgid "540, in minutes from midnight, 9am"
+msgstr "分钟，比如540表示上午9点，9x60=540"
 
-msgid "alt_speed_time_end"
+msgid "Alternative speed time end"
 msgstr "结束时间"
 
 msgid "Binding address IPv4"
@@ -188,7 +240,7 @@ msgid "Peer port"
 msgstr "节点端口"
 
 msgid "Peer port random on start"
-msgstr "启动时随机选择端口"
+msgstr "启动时随机选择端口（不推荐）"
 
 msgid "Peer port random high"
 msgstr "最大随机端口"
@@ -197,12 +249,12 @@ msgid "Peer port random low"
 msgstr "最小随机端口"
 
 msgid "Port forwarding enabled"
-msgstr "启用端口自动转发（Upnp）"
+msgstr "启用端口自动转发（UPnP）"
 
 msgid "Encryption"
-msgstr "加密"
+msgstr "加密模式"
 
-msgid "Off"
+msgid "encryption off"
 msgstr "不加密"
 
 msgid "Preferred"
@@ -217,14 +269,26 @@ msgstr "启用Lazy bitfield"
 msgid "DHT enabled"
 msgstr "启用DHT"
 
+msgid "DHT is a tool for finding peers without a tracker."
+msgstr "DHT是不通过Tracker寻找节点的工具"
+
 msgid "LPD enabled"
 msgstr "启用LPD"
+
+msgid "LPD is a tool for finding peers on your local network."
+msgstr "LDP是用于在本地网络寻找节点的工具"
 
 msgid "PEX enabled"
 msgstr "启用PEX"
 
+msgid "PEX is a tool for exchanging peer lists with the peers you're connected to."
+msgstr "PEX是用于同已与您相连接的节点交换节点名单的工具。"
+
 msgid "uTP enabled"
-msgstr "启用uTP"
+msgstr "启用µTP"
+
+msgid "uTP is a tool for reducing network congestion."
+msgstr "µTP用于减少网络拥塞。"
 
 msgid "Idle seeding limit enabled"
 msgstr "启用空闲做种时间限制"
@@ -236,25 +300,28 @@ msgid "Ratio limit enabled"
 msgstr "启用做种分享率限制"
 
 msgid "Ratio limit"
-msgstr "限制分享率"
+msgstr "分享率限制"
 
 msgid "Download queue enabled"
-msgstr "启用下载队列"
+msgstr "启用下载队列功能"
 
 msgid "Download queue size"
-msgstr "下载队列大小"
+msgstr "队列上限"
 
 msgid "Queue stalled enabled"
-msgstr "启用下载暂停队列"
+msgstr "启用失速调整"
+
+msgid "When true, torrents that have not shared data for queue-stalled-minutes are treated as 'stalled' and are not counted against the queue-download-size and seed-queue-size limits"
+msgstr "调整周期内若有种子无数据传送则送进排队中"
 
 msgid "Queue stalled minutes"
-msgstr "队列暂停时间"
+msgstr "调整周期"
 
 msgid "Seed queue enabled"
-msgstr "启用做种队列"
+msgstr "启用做种队列功能"
 
 msgid "Seed queue size"
-msgstr "做种队列大小"
+msgstr "队列上限"
 
 msgid "Scrape paused torrents enabled"
-msgstr "启用更新暂停种子"
+msgstr "更新暂停的种子"
