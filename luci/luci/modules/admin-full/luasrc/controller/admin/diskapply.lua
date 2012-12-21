@@ -22,10 +22,6 @@ function index()
 		entry({"admin", "diskapply", "fstab", "swap"},  cbi("admin_system/fstab/swap"),  nil).leaf = true
     end
 
-	if nixio.fs.access("/etc/config/transmission") then
-		entry({"admin", "diskapply", "Transmission"}, cbi("diskapply/transmission"), _("Transmission"), 11).i18n = "diskapply"
-	end
-
     	entry({"admin", "diskapply", "diskinfo"}, call("action_diskinfo"), _("Diskinfo"), 2)
 end
 
